@@ -1,0 +1,174 @@
+/* === GENERAL RULES === */
+body {
+    font-size: 16px;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,b7df2d+100 */
+    background: white; /* Old browsers */
+
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.container {
+    margin-top: 10px;
+}
+
+.fill {
+    min-height: 100vh;
+    height: 100%;
+}
+
+.lightGreen-gradient {
+    background: -moz-linear-gradient(top,  #ffffff 0%, #b7df2d 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#b7df2d 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ffffff 0%,#b7df2d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#b7df2d',GradientType=0 ); /* IE6-9 */
+}
+
+.pink-purple-blue-gradient {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#dc0181+0,091c8e+50,005cbe+100 */
+    background: #dc0181; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #dc0181 0%, #091c8e 50%, #005cbe 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #dc0181 0%,#091c8e 50%,#005cbe 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #dc0181 0%,#091c8e 50%,#005cbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc0181', endColorstr='#005cbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* === HEADER === */
+
+section.header-section {
+    margin: 0 auto;
+}
+
+header.header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("../assets/img/harza-ondas.svg");
+    background-color: white; /* #C9E763 */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.headerImage-quote-container {
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-top: 10px;
+    background-color: #006726;
+    border-radius: 100%;
+    opacity: 1.0;
+    max-width: 416px;
+    flex-direction: column;
+}
+
+.header-image {
+    max-width: 300px;
+    margin: 0 auto;
+    -webkit-box-shadow: 15px 15px 45px 0px rgba(129,185,94,1);
+    -moz-box-shadow: 15px 15px 45px 0px rgba(129,185,94,1);
+    box-shadow: 15px 15px 45px 0px rgba(129,185,94,1);
+} 
+
+p.header-slogan {
+    position: relative;
+    color: white;
+    font-size: 1.1em;
+    background-color: #59a04d;
+
+    margin-top: 3%;
+    padding: 5px 8px;
+    text-align: center;
+}
+
+div.needAQuote-box {
+    position: relative;
+    max-width: 350px;
+    right: 3%;
+    background-color: #ffffffb3;
+    text-align: center;
+    border: 5px solid #b2b2b5;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.quoteBox-header {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.needAQuote-box p a{
+    color: black;
+}
+
+.quoteBox-phoneNumber {
+    margin: 0px 10px;
+}
+
+.quote-phone-icon {
+    margin-right: 5px;
+}
+
+.quote-phone-icon {
+    font-size: 1.2em;
+}
+
+.justify-to-end {
+    margin-left: auto;
+}
+
+/* === NAVIGATION === */
+.navigation {
+    margin-top: 50%;
+}
+
+.collapsedNav-logo img {
+    width: 150px;
+}
+
+.navbar {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#6ab335+0,006726+100 */
+    background: #dc0181; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #dc0181 0%, #091c8e 50%, #005cbe 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #dc0181 0%,#091c8e 50%,#005cbe 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #dc0181 0%,#091c8e 50%,#005cbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc0181', endColorstr='#005cbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+@media only screen and (max-width: 575px) {
+    .navbar {
+        background-color: green;
+    }
+}
+
+.navLinks,
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+    font-size: 1em;
+    text-transform: uppercase;
+    opacity: 1.0;
+    /* border-right: solid 1px white; */
+    padding-right: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navLinks:hover {
+    color: #FFB914;
+}
+
+/* @media only screen and (max-width: 991px) {
+    .navLinks,
+    .navbar-dark .navbar-nav .nav-link { 
+        font-size: 0.6em;
+    }  
+} */
