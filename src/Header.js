@@ -21,6 +21,12 @@ const Header = (props) => {
                                         className="quote-phone-icon" 
                             />(562) 696-0282
                         </a>
+                        <a href="mailto:sales@harzatapes.com"
+                            className="quoteBox-mailIcon">
+                            <FontAwesome name='envelope' 
+                                        className="quote-mail-icon" 
+                            />sales@harzatapes.com
+                        </a>
                     </p>
                 </div>
             </header>

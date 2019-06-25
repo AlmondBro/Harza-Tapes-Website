@@ -16,27 +16,26 @@ import Location from "./Location.js";
 import Contact from "./Contact.js";
 
 const App = () => {
-  return ([
+  return (
     <BrowserRouter>
-      <div className="container-fluid no-padding fill">
+      <div className="container-fluid no-padding">
         <Header />
-        <div className="container">
-          <Navigation className="navigation"/>
-          <PageContent>
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/" component={Home} />
-              <Route path="/about-us" component={AboutUs} />
-              <Route path="/products" component={Products} />
-              <Route path="/location" component={Location} />
-              <Route path="/contact-us" component={Contact} />
-            </Switch>
-          </PageContent>
-        </div>
       </div>
-    </BrowserRouter>,
-    <Footer />
-    ]
+      <div className="container-fluid no-padding">
+        <Navigation className="navigation"/>
+      </div>
+      <PageContent className="fill">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/" component={Home} />
+          <Route path="/about-us" component={AboutUs} />
+          <Route path="/products" component={Products} />
+          <Route path="/location" component={Location} />
+          <Route path="/contact-us" component={Contact} />
+        </Switch>
+      </PageContent>
+      <Footer />
+    </BrowserRouter>
   );
 }
 
