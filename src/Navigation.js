@@ -34,14 +34,14 @@ const Navigation = (props) => {
                         <Nav.Link href="/location" className="navLinks">Location</Nav.Link>
                         <Nav.Link href="/contact-us" className="navLinks">Contact Us</Nav.Link> */}
                     </Nav>
-                    <Form inline>
+                    {/* <Form inline>
                         <Form.Control type="text" placeholder="Search" className="mr-sm-2" />
                         <Button variant="outline-light">
                             <FontAwesome name="search" 
                                         className="nav-search-icon" 
                             />
                         </Button>
-                    </Form>
+                    </Form> */}
                 </Navbar.Collapse>
             </Navbar>
     );

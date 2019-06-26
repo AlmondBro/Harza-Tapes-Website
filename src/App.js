@@ -27,7 +27,7 @@ const App = () => {
       <PageContent className="fill">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/" component={Home} />
+          <Route path="/home" component={Home} /> */}
           <Route path="/about-us" component={AboutUs} />
           <Route path="/products" component={Products} />
           <Route path="/location" component={Location} />

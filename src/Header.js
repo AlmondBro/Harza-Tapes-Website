@@ -14,7 +14,7 @@ const Header = (props) => {
         
                 <div className="needAQuote-box justify-to-end">
                     <h4 className="quoteBox-header">Need a quote?</h4>
-                    <p>Call: 
+                    <p>
                         <a  href="tel:1-562-696-0282" 
                             className="quoteBox-phoneNumber">
                             <FontAwesome name='phone-square' 
