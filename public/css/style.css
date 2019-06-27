@@ -25,24 +25,26 @@ body {
 }
 
 #root {
-    min-height: 100vh; /* will cover the 100% of viewport */
+    min-height: 150vh; /* will cover the 100% of viewport */
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 100px; 
+    padding-bottom: 150px; /* was 100 or */
 }
 
 .no-padding {
     padding: 0px;
 }
 
-.container {
-    margin-top: 10px;
-}
-
 .fill {
     min-height: 100vh;
     height: 100%;
+}
+
+.max-width-100 {
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto; /* Center horizontally */
 }
 
 .lightGreen-gradient {
@@ -59,6 +61,16 @@ body {
     background: -webkit-linear-gradient(-45deg,  #dc0181 0%,#091c8e 50%,#005cbe 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg,  #dc0181 0%,#091c8e 50%,#005cbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc0181', endColorstr='#005cbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/* == React Router Transition */
+.switch-wrapper {
+    position: relative;
+  }
+  
+.switch-wrapper > div {
+    width: 100%;
+    position: absolute;
 }
 
 /* === HEADER === */
@@ -307,10 +319,167 @@ div.needAQuote-box {
 
 /* Slideshow CSS */
 
+/* === HOME === */
+/* == Slider == */
+.slider{
+    max-width:100%;
+    height:175px;
+    max-height: 100%;
+    margin:10px auto;
+    /* border:1px solid; */
+    border-radius: 5px;
+    overflow:hidden;
+
+    box-shadow: -3px 3px 19px 0px rgba(0,0,0,0.45);
+    /* box-shadow: -3px 10px 25px 0px rgba(0,0,0,0.54); */
+  }
+
+@media only screen and (max-width: 767px) {
+    .slider {
+        height: 125px;
+    }
+}
+
+.slides-container{
+    width:400%;
+    height:100%;
+    animation:slide 16s infinite;
+      /*-webkit-animation-iteration-count: 2,2,2,2; /* Chrome, Safari, Opera */
+      /*animation-iteration-count: 2,2,2,2;*/
+  }
+  .slides-container div{
+    width:25%;
+    height:100%;
+    float:left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+  .slider-1{
+    background-image: url('../assets/img/Banner1.jpg');
+  }
+  .slider-2{
+    background-image: url('../assets/img/Banner2.jpg');
+  }
+  .slider-3{
+    background-image: url('../assets/img/Banner1.jpg');
+  }
+  .slider-4{
+    background-image: url('../assets/img/Banner2.jpg');
+  }
+  
+  @keyframes slide{
+    0%,100% {
+          margin-left:0%;
+      }
+      
+      12% {
+          margin-left:0%;
+      }
+      
+      24% {
+          margin-left:-100%;
+      }
+      
+      36% {
+          margin-left:-100%;
+      }
+      
+      48% {
+          margin-left:-200%;
+      }
+      
+      60% {
+          margin-left:-200%;
+      }
+      
+      72% {
+          margin-left:-300%;
+      }
+      
+      84% {
+          margin-left:-300%;  
+      }
+  }
+
+.tapeTypes {
+    margin: 5px;
+    padding: 3px;
+}
+
+#foodGradeTapes {
+    color: #0000ff;
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#customPrintedTapes {
+    color: #468816;
+    text-decoration: underline;
+    font-family: Verdana, Geneva, Arial, Helvetica, Sans-Serif;
+    font-weight: bold;
+    cursor: pointer; 
+}
+
 /* === FOOTER === */
 footer {
+    font-size: 0.8em;
+    padding: 0% 5%;
     text-align: center;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     width: 100%;
+    color: white;
+    background-color: #008125;
+}
+
+#footer-nav {
+    background-color: #005D17;
+    padding: 0% 10%;
+}
+
+#footer-nav-misc {
+    background-color: #005D17;
+
+    padding: 0% 38%;
+}
+
+#footer-nav-misc div a {
+   color: white;
+}
+
+#footer-nav div a {
+    color: white;
+}
+
+.footer-contact {
+    color: white;
+}
+
+.footer-contact a {
+    color: white;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.footer-contact-icon {
+    margin-right: 3px;
+}
+
+section#contactSession {
+    padding: 0% 22%;
+}
+
+section#footer-copyright {
+    /* font-size: 0.8em; */
+}
+
+#fontAwesome-copyright {
+    margin-left: 5px;
+}
+
+p#footer-designedBy {
+    font-size: 0.78em;
 }

@@ -8,7 +8,9 @@ const Header = (props) => {
         <section className="header-section">
             <header className="header">
                 <div className ="headerImage-quote-container">
-                    <img className="header-image" src="./assets/img/harza-tapes-logo.svg" alt="Harza Tapes" />
+                    <img className="header-image" 
+                        src="./assets/img/harza-tapes-logo.svg" 
+                        alt="Harza Tapes" />
                     <p className="header-slogan">Your best choice in Printed Packaging Tapes</p>
                 </div>
         

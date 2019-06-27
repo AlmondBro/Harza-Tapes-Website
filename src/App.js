@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Route, BrowserRouter, Switch } from "react-router-dom";
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
+import { AnimatedSwitch } from 'react-router-transition';
+
 
 //Import components
 import Header from "./Header.js";
@@ -24,15 +26,20 @@ const App = () => {
       <div className="container-fluid no-padding">
         <Navigation className="navigation"/>
       </div>
-      <PageContent className="fill">
-        <Switch>
+      <PageContent className="page-content">
+      <AnimatedSwitch
+        atEnter={{ opacity: 0 }}
+        atLeave={{ opacity: 0 }}
+        atActive={{ opacity: 1 }}
+        className="switch-wrapper"
+      >
           <Route exact path="/" component={Home} />
-          <Route path="/home" component={Home} /> */}
+          <Route path="/home" component={Home} />
           <Route path="/about-us" component={AboutUs} />
           <Route path="/products" component={Products} />
           <Route path="/location" component={Location} />
           <Route path="/contact-us" component={Contact} />
-        </Switch>
+        </AnimatedSwitch>
       </PageContent>
       <Footer />
     </BrowserRouter>
