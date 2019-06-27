@@ -2,7 +2,7 @@ import React from 'react';
 
 const PageContent = (props) => {
     return (
-        <section>
+        <section className="animated pulse page-content">
             {props.children}
         </section>
     );

@@ -8,13 +8,13 @@ const Header = (props) => {
         <section className="header-section">
             <header className="header">
                 <div className ="headerImage-quote-container">
-                    <img className="header-image" 
+                    <img className="animated bounceInDown header-image" 
                         src="./assets/img/harza-tapes-logo.svg" 
                         alt="Harza Tapes" />
-                    <p className="header-slogan">Your best choice in Printed Packaging Tapes</p>
+                    <p className="animated fadeIn header-slogan">Your best choice in Printed Packaging Tapes</p>
                 </div>
         
-                <div className="needAQuote-box justify-to-end">
+                <div className="animated bounceInRight needAQuote-box justify-to-end">
                     <h4 className="quoteBox-header">Need a quote?</h4>
                     <p>
                         <a  href="tel:1-562-696-0282" 

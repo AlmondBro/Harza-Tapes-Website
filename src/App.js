@@ -26,7 +26,7 @@ const App = () => {
       <div className="container-fluid no-padding">
         <Navigation className="navigation"/>
       </div>
-      <PageContent className="page-content">
+      <PageContent>
       <AnimatedSwitch
         atEnter={{ opacity: 0 }}
         atLeave={{ opacity: 0 }}
