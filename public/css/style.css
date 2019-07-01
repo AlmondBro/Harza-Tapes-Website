@@ -484,8 +484,23 @@ p#footer-designedBy {
     font-size: 0.78em;
 }
 
-/* === HEADER === */
+/* === ABOUT US === */
 .aboutUs-header {
     color: #EA6010;
     font-size: 1.2em;
+}
+
+/* === PRODUCTS === */
+.productsContainer {
+    padding: 30px;
+    border: 1px solid black;
+}
+
+.productsContainer ul {
+    margin-top: 10px;
+}
+
+.productsContainer ul li {
+    font-size: 0.8em;
+    color: black;
 }
