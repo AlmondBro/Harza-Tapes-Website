@@ -504,3 +504,9 @@ p#footer-designedBy {
     font-size: 0.8em;
     color: black;
 }
+
+/* === LOCATION === */
+.locationBox {
+    padding: 10px;
+    border: 1px solid black;
+}
