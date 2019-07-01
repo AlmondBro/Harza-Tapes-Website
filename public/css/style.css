@@ -483,3 +483,9 @@ section#footer-copyright {
 p#footer-designedBy {
     font-size: 0.78em;
 }
+
+/* === HEADER === */
+.aboutUs-header {
+    color: #EA6010;
+    font-size: 1.2em;
+}
