@@ -485,9 +485,18 @@ p#footer-designedBy {
 }
 
 /* === ABOUT US === */
+.aboutUs-container {
+    /* padding: 40px 80px; */
+    padding: 5% 10%;
+}
+
 .aboutUs-header {
     color: #EA6010;
     font-size: 1.2em;
+}
+
+.visionMission-container {
+    margin-top: 20px;
 }
 
 /* === PRODUCTS === */

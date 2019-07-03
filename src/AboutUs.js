@@ -2,9 +2,9 @@ import React from 'react';
 
 const AboutUs = (props) => {
     return (
-        <div className="container">
+        <div className="aboutUs-container container">
             <section className="row">
-                <h2 className="aboutUs-header">Harza Tapes &hypen; About Us</h2>
+                <h2 className="aboutUs-header">Harza Tapes &mdash; About Us</h2>
                 <p>Harza Tapes is the result of a vision of one of 
                     South America’s most important tape manufacturers, 
                     Cintandina S.A., a Colombian company with over 50 
@@ -26,7 +26,7 @@ const AboutUs = (props) => {
                     requirements.
                 </p>
             </section>
-            <section className="row">
+            <section className="visionMission-container row">
                 <div className="aboutUs-subSection col-sm-6">
                     <h3>Mission</h3>
                     <p>
