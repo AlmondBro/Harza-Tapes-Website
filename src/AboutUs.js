@@ -5,7 +5,7 @@ const AboutUs = (props) => {
         <div className="aboutUs-container container">
             <section className="row">
                 <h2 className="aboutUs-header">Harza Tapes &mdash; About Us</h2>
-                <p>Harza Tapes is the result of a vision of one of 
+                <p> Harza Tapes is the result of a vision of one of 
                     South America’s most important tape manufacturers, 
                     Cintandina S.A., a Colombian company with over 50 
                     years of experience in the pressure sensitive tape 
@@ -47,6 +47,9 @@ const AboutUs = (props) => {
                     </p>
                 </div>
             </section>
+            <div className="row">
+                <div className=""></div>
+            </div>
         </div>   
     );
 };
