@@ -2,27 +2,26 @@ import React from 'react';
 
 const Products = (props) => {
     return (
-        <div className="container">
+        <div className="productsPage container">
             <div className="row">
                 <div className="col-md-3">
                     <aside className="products-sidebar">
                         <ul>
                             <li><h3>Our Products</h3></li>
-                            <li>Custom Printed Tapes</li>
-                            <li>Stock Printed Tapes</li>
+                            <li><a href="">Custom Printed Tapes</a></li>
+                            <li><a href="">Stock Printed Tapes</a></li>
                             <li>Carton Sealing Tapes
                                 <ul>
-                                    <li>Acrylic</li>
-                                    <li>Hot Melt</li>
-                                    <li>Hot Melt</li>
-                                    <li>Color</li>
-                                    <li>Flat Back Paper</li>
+                                    <li><a href="">Acrylic</a></li>
+                                    <li><a href="">Hot Melt</a></li>
+                                    <li><a href="">Color</a></li>
+                                    <li><a href="">Flat Back Paper</a></li>
                                 </ul>
                             </li>
-                            <li>Dispensers
+                            <li><a href="">Dispensers</a>
                                 <ul>
-                                    <li>Multi-roll</li>
-                                    <li>Pistol Grip</li>
+                                    <li><a href="">Multi-roll</a></li>
+                                    <li><a href="">Pistol Grip</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -83,7 +82,7 @@ const Products = (props) => {
                     </section>
                 </div>
             </div>
-            <section className="row">
+            <section className="products-bottom row">
                 <p>Please contact us if you do not see the kind of tape
                     that you are looking for. 
                 </p>
