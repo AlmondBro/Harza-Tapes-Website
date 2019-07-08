@@ -537,32 +537,17 @@ p#footer-designedBy {
 
 aside.products-sidebar {
     color: black;
-    background-color: rgba(106, 179, 53, 0.3);
+    background-color: white;;
     height: 100%;
     padding: 3px 10px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 aside.products-sidebar ul li {
     list-style: none;
 }
 
-aside.products-sidebar ul li {
-
-}
-
-aside.products-sidebar ul li h3 {
-    list-style-type: none;
-    text-decoration: underline;
-}
-
-.productsContainer {
-    padding: 30px;
-    padding-top: 0px;
-    /* border: 1px solid black; */
-}
-
-.productsContainer ul li::before {
+aside.products-sidebar ul li::before {
     content: url('../assets/img/postbullets.png');
     margin-right: 6px;
     bottom: 2px;
@@ -573,8 +558,55 @@ aside.products-sidebar ul li h3 {
     line-height: 0;
 }
 
+li#ourProducts-header-li::before {
+    content: "";
+}
+
+aside.products-sidebar ul li a {
+    color: black;
+}
+
+#ourProducts-header-li {
+    list-style: none;
+}
+
+aside.products-sidebar ul li h3 {
+    list-style: none;
+    text-decoration: underline;
+}
+
+
+.products-sidebar ul li ul li::before {
+    content: "";
+}
+
+.products-sidebar ul li ul li {
+    list-style: unset;
+}
+
+.productsContainer {
+    padding: 30px;
+    padding-top: 0px;
+    /* border: 1px solid black; */
+}
+
+.productsContainer ul li::before {
+    content: url('../assets/img/postbullets.png');
+    margin-right: 12px;
+    bottom: 2px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    line-height: 0;
+}
+
 .productsContainer ul li {
     list-style: none;
+}
+
+.productsContainer ul li a {
+    color: white;
 }
 
 section.productsRow {
@@ -595,8 +627,22 @@ section.productsRow {
     margin: 0 auto;
 }
 
-/* === LOCATION === */
-.locationBox {
+/* === LOCATIONS === */
+.location-container h3 {
+    font-size: 2em;
+    color: #ea6010;
+}
+
+ .locationBox  {
+    text-align: center;
+    /* margin: 5px; */
+    text-align: center;
+    line-height: 10px;
     padding: 10px;
     border: 1px solid black;
+ }
+
+.locationBox h4 {
+    font-size: 1.6em;
 }
+

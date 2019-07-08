@@ -7,10 +7,10 @@ const Products = (props) => {
                 <div className="col-md-3">
                     <aside className="products-sidebar">
                         <ul>
-                            <li><h3>Our Products</h3></li>
+                            <li id="ourProducts-header-li"><h3>Our Products</h3></li>
                             <li><a href="">Custom Printed Tapes</a></li>
                             <li><a href="">Stock Printed Tapes</a></li>
-                            <li>Carton Sealing Tapes
+                            <li><a href="">Carton Sealing Tapes</a>
                                 <ul>
                                     <li><a href="">Acrylic</a></li>
                                     <li><a href="">Hot Melt</a></li>

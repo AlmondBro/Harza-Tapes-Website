@@ -2,7 +2,7 @@ import React from 'react';
 
 const Location = (props) => {
     return (
-        <section className="container">
+        <section className="location-container container">
             <h3>
                 Our Offices
             </h3>
