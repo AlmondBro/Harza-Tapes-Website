@@ -1,5 +1,8 @@
 import React from 'react';
 
+//Import 3rd-party packages
+import FontAwesome from 'react-fontawesome';
+
 const Location = (props) => {
     return (
         <section className="location-container container">
@@ -10,11 +13,23 @@ const Location = (props) => {
                 <div className="locationBox col-sm-5">
                     <h4>U.S.A. 🇺🇸</h4> 
                     <h5>Harza Tapes</h5>
-                    <p>8237 Allport Ave</p>
-                    <p>Santa Fe Springs, CA 90670</p>
-                    <p><a href="tel:562-696-0282">Tel: (562) 696-0282</a></p>
-                    <p><a href="mailto:sales@harzatapes.com">sales@harzatapes.com</a></p>
-                    <p><a href="https://www.harzatapes.com">www.harzatapes.com</a></p>
+                    <p>
+                        <a href="">
+                            <FontAwesome name='map' 
+                                        className="quote-phone-icon" 
+                            /> 
+                            8237 Allport Ave Santa Fe Springs, CA 90670
+                        </a>
+                    </p>
+                    <p><a href="tel:562-696-0282"><FontAwesome name='phone-square' 
+                                        className="quote-phone-icon" 
+                            /> (562) 696-0282</a></p>
+                    <p><a href="mailto:sales@harzatapes.com"><FontAwesome name='envelope' 
+                                        className="quote-phone-icon" 
+                            />sales@harzatapes.com</a></p>
+                    <p><a href="https://www.harzatapes.com"><FontAwesome name='globe' 
+                                        className="quote-phone-icon" 
+                            />www.harzatapes.com</a></p>
                 </div>
                 <div className="locationBox col-sm-5">
                     <h4>Colombia 🇨🇴</h4>
