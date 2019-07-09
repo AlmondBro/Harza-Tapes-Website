@@ -18,12 +18,17 @@ const Location = (props) => {
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
                             /> 
-                            8237 Allport Ave Santa Fe Springs, CA 90670
+                            8237 Allport Ave &mdash; Santa Fe Springs, CA 90670
                         </a>
                     </p>
-                    <p><a href="tel:562-696-0282"><FontAwesome name='phone-square' 
+                    <p>
+                        <a href="tel:562-696-0282">
+                            <FontAwesome name='phone' 
                                         className="quote-phone-icon" 
-                            /> (562) 696-0282</a></p>
+                            /> 
+                            (562) 696-0282
+                        </a>
+                    </p>
                     <p><a href="mailto:sales@harzatapes.com"><FontAwesome name='envelope' 
                                         className="quote-phone-icon" 
                             />sales@harzatapes.com</a></p>
@@ -34,12 +39,42 @@ const Location = (props) => {
                 <div className="locationBox col-sm-5">
                     <h4>Colombia 🇨🇴</h4>
                     <h5>Cintandina</h5>
-                    <p>Cra. 2a. No. 37-50</p>
-                    <p>Cali, Colombia</p>
-                    <p><a href="tel:572-443-0801">Tel: (572) 443-0801</a></p>
-                    <p><a href="tel:572-443-0801-0104">Tel: (572) 443-0801 ext. 0104</a></p>
-                    <p><a href="mailto:export@cintandina.com">export@cintandina.com</a></p>
-                    <p><a href="https://www.cintandina.com">www.cintandina.com</a></p>
+                    <p>
+                        <a href="">
+                            <FontAwesome name='map' 
+                                        className="quote-phone-icon" 
+                            /> 
+                            Cra. 2a. No. 37-50 &mdash; Cali, Colombia
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:572-443-0801">
+                            <FontAwesome name='phone' 
+                                        className="quote-phone-icon" 
+                            /> (572) 443-0801
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:572-443-0801-0104">
+                            <FontAwesome name='fax' 
+                                        className="quote-phone-icon" 
+                            /> (572) 443-0801 ext. 0104
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:export@cintandina.com">
+                            <FontAwesome name='envelope' 
+                                        className="quote-phone-icon" 
+                            />export@cintandina.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.cintandina.com">
+                            <FontAwesome name='globe' 
+                                        className="quote-phone-icon" 
+                            /> www.cintandina.com
+                        </a>
+                    </p>
                 </div>
             </div>
             <div className="row">
