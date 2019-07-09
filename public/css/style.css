@@ -633,16 +633,28 @@ section.productsRow {
     color: #ea6010;
 }
 
- .locationBox  {
-    text-align: center;
-    /* margin: 5px; */
-    text-align: center;
-    line-height: 10px;
-    padding: 10px;
-    border: 1px solid black;
- }
+.location-container .row {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+ .locationBox {
+	text-align: center;
+	margin: 5px;
+	text-align: center;
+	line-height: 10px;
+	padding: 0px;
+	border: 1px solid black;
+	padding-top: 0px;
+}
 
 .locationBox h4 {
     font-size: 1.6em;
+    background-color: #006726;
+    color: white;
 }
 
+.locationBox p {
+    line-height: 1em;
+}
