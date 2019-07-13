@@ -81,12 +81,38 @@ const Location = (props) => {
                 <div className="locationBox col-sm-5">
                     <h4>Costa Rica 🇨🇷</h4>
                     <h5>Cintandina</h5>
-                    <p>La Uruca Frente a Mercedes Benz</p>
-                    <p>Ofibodegas JW #29</p>
-                    <p>San Jose, Costa Rica</p>
-                    <p><a href="tel:506-2293-2358">Tel: (506) 2293-2358</a></p>
-                    <p><a href="mailto:costarica@cintandina.com">costarica@cintandina.com</a></p>
-                    <p><a href="https://www.cintandina.com">www.cintandina.com</a></p>
+                    {/* <p>La Uruca Frente a Mercedes Benz</p> */}
+                    <p>
+                        <a href="">
+                            <FontAwesome name='map' 
+                                        className="quote-phone-icon" 
+                            /> 
+                            Ofibodegas JW #29 &mdash; San Jose, Costa Rica 
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:506-2293-2358">
+                        <FontAwesome name='phone' 
+                                        className="quote-phone-icon" 
+                        />  (506) 2293-2358
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:costarica@cintandina.com">
+                            <FontAwesome name='envelope' 
+                                        className="quote-phone-icon" 
+                            />     
+                            costarica@cintandina.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.cintandina.com">
+                        <FontAwesome name='globe' 
+                                        className="quote-phone-icon" 
+                        /> 
+                            www.cintandina.com
+                        </a>
+                    </p>
                 </div>
                 <div className="locationBox col-sm-5">
                     <h4>Ecuador 🇪🇨</h4>
