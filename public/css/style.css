@@ -250,7 +250,7 @@ div.needAQuote-box {
     background: linear-gradient(135deg,  #dc0181 0%,#091c8e 50%,#005cbe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc0181', endColorstr='#005cbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 /* NavBar Toggle */
 .collapsedNav-logo.navbar-brand {
