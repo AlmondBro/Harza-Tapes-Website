@@ -117,13 +117,46 @@ const Location = (props) => {
                 <div className="locationBox col-sm-5">
                     <h4>Ecuador 🇪🇨</h4>
                     <h5>Cintandina</h5>
-                    <p>Galo Plaza Lasso</p>
-                    <p>N62-65 y Nazareth</p>
-                    <p>San Jose, Costa Rica</p>
-                    <p><a href="tel:593-2-3464-005">Tel: (593-2) 3464-005</a></p>
-                    <p><a href="tel:593-2-3464-311">Tel: (593-2) 3464-311</a></p>
-                    <p><a href="mailto:costarica@cintandina.com">costarica@cintandina.com</a></p>
-                    <p><a href="https://www.cintandina.com">www.cintandina.com</a></p>
+                    <p>
+                        <a href="">
+                            <FontAwesome name='map' 
+                                            className="quote-phone-icon" 
+                            /> 
+                            Galo Plaza Lasso &mdash; N62-65 y Nazareth &mdash; San Jose, Costa Rica
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:593-2-3464-005">
+                            <FontAwesome name='phone' 
+                                            className="quote-phone-icon" 
+                            /> 
+                            (593-2) 3464-005
+                        </a>
+                    </p>
+                    <p>
+                        <a href="tel:593-2-3464-311">
+                            <FontAwesome name='phone' 
+                                            className="quote-phone-icon" 
+                            /> 
+                            (593-2) 3464-311
+                        </a>
+                    </p>
+                    <p>
+                        <a href="mailto:costarica@cintandina.com">
+                            <FontAwesome name='mail' 
+                                            className="quote-phone-icon" 
+                            /> 
+                            costarica@cintandina.com
+                        </a>
+                    </p>
+                    <p>
+                        <a href="https://www.cintandina.com">
+                            <FontAwesome name='map' 
+                                            className="quote-phone-icon" 
+                            /> 
+                            www.cintandina.com
+                        </a>
+                    </p>
                 </div>
             </div>
         </section>
