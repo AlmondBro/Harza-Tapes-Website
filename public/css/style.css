@@ -105,6 +105,10 @@ main.page-content {
 
 /* === HEADER === */
 
+header.headerAndNav {
+    display: block;
+}
+
 section.header-section {
     margin: 0 auto;
 }
