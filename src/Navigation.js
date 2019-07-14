@@ -15,7 +15,7 @@ import NavbarToggle from "./NavbarToggle.js";
 const Navigation = (props) => {
     return (
         <Navbar bg="green" variant="dark" expand="sm" className="navbar">
-                <Navbar.Brand href="/home" className="collapsedNav-logo">
+                <Navbar.Brand className="collapsedNav-logo">
                     <img src="/assets/img/harza-tapes-logo.svg" alt="Harza Tapes" />
                 </Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
