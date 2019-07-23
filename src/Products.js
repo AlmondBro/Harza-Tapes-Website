@@ -35,9 +35,9 @@ const Products = (props) => {
                                 className="img-fluid flex-img-center" 
                             />
                             <ul>
-                                <li>Quality printing up to 3 colors</li>
-                                <li>White, clear, or tan polypropylene tape</li>
-                                <li>No art charge</li>
+                                <li>Quality Printing Up to 3 colors</li>
+                                <li>White, Clear, or Tan Polypropylene Tape</li>
+                                <li>No Artwork Charge</li>
                             </ul>
                         </div>
                         <div className="productsContainer col-sm-6">
@@ -46,7 +46,7 @@ const Products = (props) => {
                                 className="img-fluid flex-img-center" 
                             />
                             <ul>
-                                <li>Tapes with preprinted messages
+                                <li>Tapes with Preprinted Messages
                                     <ul>
                                         <li>
                                             To prevent pilferage
@@ -64,8 +64,8 @@ const Products = (props) => {
                                 className="img-fluid flex-img-center" 
                             />
                             <ul>
-                                <li>Clear, white, tan, & colored polypropylene tapes</li>
-                                <li>Flat back paper tape</li>
+                                <li>Clear, White, Tan, & Colored <br/><span id="poly">&emsp; Polypropylene Tapes</span></li>
+                                <li>Flat Back Paper Tape</li>
                             </ul>
                         </div>
                         <div className="productsContainer col-sm-6">

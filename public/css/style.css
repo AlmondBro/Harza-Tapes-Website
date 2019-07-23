@@ -631,6 +631,10 @@ section.productsRow {
     margin: 0 auto;
 }
 
+#poly {
+    margin-right: 15px;
+}
+
 /* === LOCATIONS === */
 .location-container h3 {
     font-size: 2em;
@@ -651,7 +655,9 @@ section.productsRow {
 	padding: 0px;
     border: 1px solid black;
     border-top: 0px;
-	padding-top: 0px;
+    padding-top: 0px;
+    /* background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HKxta86in0ls1we/videoblocks-griffith-observatory-and-downtown-los-angeles-day-to-night-transition-timelapse_hsjbqawnl_thumbnail-full01.png");
+    background-size: contain; */
 }
 
 .locationBox h4 {
@@ -666,4 +672,8 @@ section.productsRow {
 
 .locationBox p a {
     color: black;
+}
+
+div.locationBox p a.locationLink {
+    line-height: 1.2em;
 }
