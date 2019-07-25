@@ -656,6 +656,7 @@ section.productsRow {
     border: 1px solid black;
     border-top: 0px;
     padding-top: 0px;
+    background-color: rgba(106, 179, 53, 0.05 );
     /* background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HKxta86in0ls1we/videoblocks-griffith-observatory-and-downtown-los-angeles-day-to-night-transition-timelapse_hsjbqawnl_thumbnail-full01.png");
     background-size: contain; */
 }
@@ -679,8 +680,25 @@ div.locationBox p a.locationLink {
 }
 
 /* === CONTACT US === */
+textarea {
+    max-width: 100%;
+}
 .contact-container form {
+    border: 1px solid black;
+    border-top: 0px;
+    margin: 10px auto;
+    background-color: rgba(106, 179, 53, 0.05 );
+}
 
+.contact-container form fieldset legend.form-legend {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    padding-left: 15px; 
+}
+
+div.contactContainerForm-row {
+    padding: 15px;
 }
 
 .contact-container form fieldset p.formfield {
@@ -689,6 +707,8 @@ div.locationBox p a.locationLink {
 
 input.form-field-input {
     /* width: 100%; */
+    border: 1px solid black;
+    background-color: white;
 }
 
 label.form-field-label {
@@ -705,4 +725,17 @@ label.form-field-label abbr {
 .form-asterisk {
     color: red;
     font-weight: bold;
+}
+
+p.form-field button {
+    border: none;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+button#reset-button {
+    background-color: #082192;
 }
