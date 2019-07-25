@@ -680,7 +680,7 @@ div.locationBox p a.locationLink {
 }
 
 /* === CONTACT US === */
-textarea {
+input, textarea, select {
     max-width: 100%;
 }
 .contact-container form {
@@ -695,6 +695,16 @@ textarea {
     color: white;
     padding: 5px;
     padding-left: 15px; 
+}
+
+div.qr-code-row {
+    padding-top: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: 1px dashed black;
 }
 
 div.contactContainerForm-row {
@@ -738,4 +748,17 @@ p.form-field button {
 
 button#reset-button {
     background-color: #082192;
+}
+
+.qrCode-figure img {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.qrCode-figure figcaption {
+    font-size: 1em;
+    text-align: center;
 }

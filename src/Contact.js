@@ -24,6 +24,31 @@ class Contact extends Component  {
                 <form action="" method="post">
                     <fieldset>
                         <legend className="form-legend">Contact Us</legend>
+                        <div className="qr-code-row row">
+                            <div className="col-md-3">
+                                <h5>By e-mail:</h5>
+                                <p><a href="mailto:sales@harzatapes.com">sales@harzatapes.com</a></p>
+    
+                                <section>
+                                    <p>8237 Allport Ave.</p>
+                                    <p>Santa Fe Springs,</p>
+                                    <p>CA 90260</p>
+    
+                                    <p><a>Tel: (562) 696-0282 </a></p>
+                                    <p><a>Fax: (509) 471-0282 </a></p>
+    
+                                </section>
+                            </div>
+                            <div className="col-md-3">
+                                <figure className="qrCode-figure">
+                                    <img src="./assets/img/contactUs-QRcode.jpg" className="img-fluid" alt="Harza Tapes QR Code" />
+                                    <figcaption>Scan and save our <br/> info on your cellphone</figcaption>
+                                </figure>
+                            </div>
+                            <div className="col-md-3">
+                                <img src="./assets/img/deal.png" className="img-fluid" />
+                            </div>
+                        </div>
                         <div className="contactContainerForm-row row">
                             <div className="col-md-6">
                                 <p className="form-field">
