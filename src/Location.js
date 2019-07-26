@@ -14,7 +14,9 @@ const Location = (props) => {
                     <h4>U.S.A. 🇺🇸</h4> 
                     <h5>Harza Tapes</h5>
                     <p>
-                        <a href="" className="locationLink">
+                        <a 
+                            target="_blank"
+                            href="https://www.google.com/maps/place/Harza+Tapes/@33.966971,-118.0669307,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2d3b53a9cf309:0x3a23927fc824b33f!8m2!3d33.966971!4d-118.064742" className="locationLink">
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
                             /> 

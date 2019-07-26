@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 
 //Import state abbreviations to generate in the form
 import stateAbbreviations from "./stateAbbreviations.js";
+
+//Import 3rd-party packages
+import FontAwesome from 'react-fontawesome';
 class Contact extends Component  {
     constructor(props) {
         super(props);
@@ -26,17 +29,43 @@ class Contact extends Component  {
                         <legend className="form-legend">Contact Us</legend>
                         <div className="qr-code-row row">
                             <div className="col-md-3">
-                                <h5>By e-mail:</h5>
-                                <p><a href="mailto:sales@harzatapes.com">sales@harzatapes.com</a></p>
-    
                                 <section>
-                                    <p>8237 Allport Ave.</p>
-                                    <p>Santa Fe Springs,</p>
-                                    <p>CA 90260</p>
+                                    <h5>By e-mail:</h5>
+                                    <p className="extraContactInfo">
+                                        <FontAwesome name='envelope' 
+                                                    className="quote-phone-icon" 
+                                        />
+                                        <a href="mailto:sales@harzatapes.com">
+                                            sales@harzatapes.com
+                                        </a>
+                                    </p>
     
-                                    <p><a>Tel: (562) 696-0282 </a></p>
-                                    <p><a>Fax: (509) 471-0282 </a></p>
-    
+                                    <p className="extraContactInfo">
+                                        <FontAwesome name='map' 
+                                            className="quote-phone-icon" 
+                                        /> 
+                                        <a 
+                                            target="_blank"
+                                            href="https://www.google.com/maps/place/Harza+Tapes/@33.966971,-118.0669307,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2d3b53a9cf309:0x3a23927fc824b33f!8m2!3d33.966971!4d-118.064742">
+                                            8237 Allport Ave<br/>
+                                            Santa Fe Springs,<br/>
+                                            CA 90260
+                                        </a>
+                                    </p>
+                                    <p className="extraContactInfo">
+                                        <a href="tel:(562) 696-0282">  
+                                            <FontAwesome name='phone' 
+                                                         className="quote-phone-icon" 
+                                            /> (562) 696-0282 
+                                        </a>
+                                    </p>
+                                    <p className="extraContactInfo">
+                                        <a href="fax:(509) 471-0282">
+                                            <FontAwesome name='fax' 
+                                                         className="quote-phone-icon" 
+                                            /> (509) 471-0282 
+                                        </a>
+                                    </p>
                                 </section>
                             </div>
                             <div className="col-md-3">

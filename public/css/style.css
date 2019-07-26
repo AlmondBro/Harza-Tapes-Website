@@ -741,13 +741,21 @@ p.form-field button {
     border: none;
     margin: 5px;
     padding: 10px 15px;
-    background-color: green;
+    background-color: #006726;
     color: white;
     border-radius: 5px;
 }
 
+p.form-field button:hover {
+    background-color: #007f2e;
+}
+
 button#reset-button {
     background-color: #082192;
+}
+
+button#reset-button:hover {
+    background-color: #0a29b2;
 }
 
 .qrCode-figure img {
@@ -761,4 +769,9 @@ button#reset-button {
 .qrCode-figure figcaption {
     font-size: 1em;
     text-align: center;
+}
+
+p.extraContactInfo a,
+p.extraContactInfo a:hover {
+    color: black;
 }
