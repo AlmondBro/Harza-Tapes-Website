@@ -47,9 +47,21 @@ const AboutUs = (props) => {
                     </p>
                 </div>
             </section>
-            <div className="row">
-                <div className=""></div>
-            </div>
+            <section className="aboutUs-bestChoice">
+                <div className="row">
+                    <h5>
+                        The best choice in High Quality Printed 
+                        Packaging Tapes
+                    </h5>
+                </div>
+                <div className="row">
+                    <img src="./assets/img/best_choice.png" 
+                        className="img-fluid"
+                        alt="People Discussing on Table"
+                    />
+                </div>
+            </section>
+           
         </div>   
     );
 };
