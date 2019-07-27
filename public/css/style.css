@@ -105,6 +105,10 @@ main.page-content {
 
 /* === HEADER === */
 
+header.headerAndNav {
+    display: block;
+}
+
 section.header-section {
     margin: 0 auto;
 }
@@ -136,7 +140,7 @@ header.header {
 @media only screen and (max-width: 575px) {
     header.header {
         height: 55px;
-        margin-bottom: 88px;
+        margin-bottom: -10px;
     }
 }
 
@@ -148,7 +152,7 @@ header.header {
     /* background-color: #006726; */
     border-radius: 100%;
     opacity: 1.0;
-    max-width: 416px;
+    width: 100%;
     flex-direction: column;
 }
 
@@ -171,14 +175,14 @@ p.header-slogan {
     color: black;
     font-size: 1.1em;
     /* background-color: #59a04d; */
-
-    margin-top: 3%;
+    font-weight: bold;
+    margin-top: 0.7%;
     padding: 5px 8px;
     text-align: center;
 }
 
 div.needAQuote-box {
-    position: relative;
+    position: absolute;
     max-width: 350px;
     right: 5%;
     background-color: #ffffffb3;
@@ -186,6 +190,7 @@ div.needAQuote-box {
     border: 5px solid #b2b2b5;
     padding: 8px;
     border-radius: 10%;
+    top: 3%;
     /* border-radius: 50%; */
 }
 
@@ -255,6 +260,10 @@ div.needAQuote-box {
 /* NavBar Toggle */
 .collapsedNav-logo.navbar-brand {
     display: none;
+}
+
+.mr-auto.navbar-nav {
+    margin: 0 auto;
 }
 
 @media only screen and (max-width: 575px) {
@@ -515,6 +524,11 @@ p#footer-designedBy {
     font-size: 0.78em;
 }
 
+#footer-copyrightWithYear {
+    margin-bottom: 0.2rem;
+    margin-top: -0.85em;
+}
+
 /* === ABOUT US === */
 .aboutUs-container {
     /* padding: 40px 80px; */
@@ -528,6 +542,11 @@ p#footer-designedBy {
 
 .visionMission-container {
     margin-top: 20px;
+}
+
+section.aboutUs-bestChoice div.row h5,
+section.aboutUs-bestChoice div.row img {
+    margin: 10px auto;
 }
 
 /* === PRODUCTS === */
@@ -549,7 +568,7 @@ aside.products-sidebar ul li {
 
 aside.products-sidebar ul li::before {
     content: url('../assets/img/postbullets.png');
-    margin-right: 6px;
+    margin-right: 10px;
     bottom: 2px;
     position: relative;
     display: inline-block;
@@ -601,8 +620,11 @@ aside.products-sidebar ul li h3 {
     line-height: 0;
 }
 
-.productsContainer ul li {
+.productsContainer ul li,
+.productsContainer ul li ul li {
     list-style: none;
+    font-size: 0.8em;
+    color: black;
 }
 
 .productsContainer ul li a {
@@ -618,13 +640,12 @@ section.productsRow {
     margin-top: 10px;
 }
 
-.productsContainer ul li {
-    font-size: 0.8em;
-    color: black;
-}
-
 .products-bottom p {
     margin: 0 auto;
+}
+
+#poly {
+    margin-right: 15px;
 }
 
 /* === LOCATIONS === */
@@ -647,7 +668,10 @@ section.productsRow {
 	padding: 0px;
     border: 1px solid black;
     border-top: 0px;
-	padding-top: 0px;
+    padding-top: 0px;
+    background-color: rgba(106, 179, 53, 0.05 );
+    /* background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HKxta86in0ls1we/videoblocks-griffith-observatory-and-downtown-los-angeles-day-to-night-transition-timelapse_hsjbqawnl_thumbnail-full01.png");
+    background-size: contain; */
 }
 
 .locationBox h4 {
@@ -662,4 +686,109 @@ section.productsRow {
 
 .locationBox p a {
     color: black;
+}
+
+div.locationBox p a.locationLink {
+    line-height: 1.2em;
+}
+
+/* === CONTACT US === */
+input, textarea, select {
+    max-width: 100%;
+}
+.contact-container form {
+    border: 1px solid black;
+    border-top: 0px;
+    margin: 10px auto;
+    background-color: rgba(106, 179, 53, 0.05 );
+}
+
+.contact-container form fieldset legend.form-legend {
+    background-color: green;
+    color: white;
+    padding: 5px;
+    padding-left: 15px; 
+}
+
+div.qr-code-row {
+    padding-top: 10px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border-bottom: 1px dashed black;
+}
+
+div.contactContainerForm-row {
+    padding: 15px;
+}
+
+.contact-container form fieldset p.formfield {
+
+}
+
+input.form-field-input {
+    /* width: 100%; */
+    border: 1px solid black;
+    background-color: white;
+}
+
+label.form-field-label {
+    margin-right: 5px;
+}
+
+label.form-field-label abbr {
+    margin-left: 1px;
+    border-bottom: none;
+    cursor: inherit;
+    text-decoration: none;
+}
+
+.form-asterisk {
+    color: red;
+    font-weight: bold;
+}
+
+p.form-field button {
+    border: none;
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: #006726;
+    color: white;
+    border-radius: 5px;
+}
+
+p.form-field button:hover {
+    background-color: #007f2e;
+}
+
+button#reset-button {
+    background-color: #082192;
+}
+
+button#reset-button:hover {
+    background-color: #0a29b2;
+}
+
+.qrCode-figure img {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+.qrCode-figure figcaption {
+    font-size: 1em;
+    text-align: center;
+}
+
+p.extraContactInfo a,
+p.extraContactInfo a:hover {
+    color: black;
+}
+
+p.form-field-message {
+    font-style: italic;
 }

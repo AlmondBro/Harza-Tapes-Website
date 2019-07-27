@@ -14,11 +14,13 @@ const Location = (props) => {
                     <h4>U.S.A. 🇺🇸</h4> 
                     <h5>Harza Tapes</h5>
                     <p>
-                        <a href="">
+                        <a 
+                            target="_blank"
+                            href="https://www.google.com/maps/place/Harza+Tapes/@33.966971,-118.0669307,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2d3b53a9cf309:0x3a23927fc824b33f!8m2!3d33.966971!4d-118.064742" className="locationLink">
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
                             /> 
-                            8237 Allport Ave &mdash; Santa Fe Springs, CA 90670
+                            8237 Allport Ave <br/> Santa Fe Springs, CA 90670
                         </a>
                     </p>
                     <p>
@@ -40,11 +42,11 @@ const Location = (props) => {
                     <h4>Colombia 🇨🇴</h4>
                     <h5>Cintandina</h5>
                     <p>
-                        <a href="">
+                        <a href="" className="locationLink">
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
                             /> 
-                            Cra. 2a. No. 37-50 &mdash; Cali, Colombia
+                            Cra. 2a. No. 37-50 <br/> Cali, Colombia
                         </a>
                     </p>
                     <p>
@@ -83,18 +85,18 @@ const Location = (props) => {
                     <h5>Cintandina</h5>
                     {/* <p>La Uruca Frente a Mercedes Benz</p> */}
                     <p>
-                        <a href="">
+                        <a href="" className="locationLink">
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
                             /> 
-                            Ofibodegas JW #29 &mdash; San Jose, Costa Rica 
+                            Ofibodegas JW #29 <br/> San Jose, Costa Rica 
                         </a>
                     </p>
                     <p>
-                        <a href="tel:506-2293-2358">
+                        <a href="tel:506-2248-0707">
                         <FontAwesome name='phone' 
                                         className="quote-phone-icon" 
-                        />  (506) 2293-2358
+                        />  (506) 2248-0707
                         </a>
                     </p>
                     <p>
@@ -118,11 +120,11 @@ const Location = (props) => {
                     <h4>Ecuador 🇪🇨</h4>
                     <h5>Cintandina</h5>
                     <p>
-                        <a href="">
+                        <a href="" className="locationLink">
                             <FontAwesome name='map' 
                                             className="quote-phone-icon" 
                             /> 
-                            Galo Plaza Lasso &mdash; N62-65 y Nazareth &mdash; San Jose, Costa Rica
+                            Galo Plaza Lasso &mdash; N62-65 y Nazareth <br/> Quito, Ecuador
                         </a>
                     </p>
                     <p>
@@ -143,15 +145,15 @@ const Location = (props) => {
                     </p>
                     <p>
                         <a href="mailto:costarica@cintandina.com">
-                            <FontAwesome name='mail' 
+                            <FontAwesome name='envelope' 
                                             className="quote-phone-icon" 
                             /> 
-                            costarica@cintandina.com
+                            ecuador@cintandina.com
                         </a>
                     </p>
                     <p>
                         <a href="https://www.cintandina.com">
-                            <FontAwesome name='map' 
+                            <FontAwesome name='globe' 
                                             className="quote-phone-icon" 
                             /> 
                             www.cintandina.com
