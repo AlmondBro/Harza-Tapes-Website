@@ -526,6 +526,7 @@ p#footer-designedBy {
 
 #footer-copyrightWithYear {
     margin-bottom: 0.2rem;
+    margin-top: -0.85em;
 }
 
 /* === ABOUT US === */
