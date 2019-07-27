@@ -524,6 +524,10 @@ p#footer-designedBy {
     font-size: 0.78em;
 }
 
+#footer-copyrightWithYear {
+    margin-bottom: 0.2rem;
+}
+
 /* === ABOUT US === */
 .aboutUs-container {
     /* padding: 40px 80px; */
