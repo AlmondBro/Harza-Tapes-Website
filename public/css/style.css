@@ -152,7 +152,7 @@ header.header {
     /* background-color: #006726; */
     border-radius: 100%;
     opacity: 1.0;
-    max-width: 416px;
+    width: 100%;
     flex-direction: column;
 }
 
@@ -176,13 +176,13 @@ p.header-slogan {
     font-size: 1.1em;
     /* background-color: #59a04d; */
     font-weight: bold;
-    margin-top: 3%;
+    margin-top: 0.7%;
     padding: 5px 8px;
     text-align: center;
 }
 
 div.needAQuote-box {
-    position: relative;
+    position: absolute;
     max-width: 350px;
     right: 5%;
     background-color: #ffffffb3;
@@ -190,6 +190,7 @@ div.needAQuote-box {
     border: 5px solid #b2b2b5;
     padding: 8px;
     border-radius: 10%;
+    top: 3%;
     /* border-radius: 50%; */
 }
 
