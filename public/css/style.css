@@ -568,7 +568,7 @@ aside.products-sidebar ul li {
 
 aside.products-sidebar ul li::before {
     content: url('../assets/img/postbullets.png');
-    margin-right: 6px;
+    margin-right: 10px;
     bottom: 2px;
     position: relative;
     display: inline-block;
