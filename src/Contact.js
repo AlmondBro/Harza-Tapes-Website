@@ -113,10 +113,11 @@ class Contact extends Component  {
                             </div>
                             <div className="col-md-6">
                                 <p className="form-field">
-                                    <p className="form-field-message">Include only if...you want to receive
-                                        FREE by <br/> mail one roll of Printed 
-                                        Sealing Tape and one <br/>2019 Calendar
-                                        Magnet (while supplies last)
+                                    <p className="form-field-message">
+                                        Include only if...you wish to receive
+                                        by<br/> mail one FREE roll of our Printed 
+                                        Sealing <br/> Tape and one 2019 Calendar
+                                        Magnet <br/>(while supplies last)
                                     </p>
                                     <label className="form-field-label">
                                         Address: 

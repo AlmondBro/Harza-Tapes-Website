@@ -620,8 +620,11 @@ aside.products-sidebar ul li h3 {
     line-height: 0;
 }
 
-.productsContainer ul li {
+.productsContainer ul li,
+.productsContainer ul li ul li {
     list-style: none;
+    font-size: 0.8em;
+    color: black;
 }
 
 .productsContainer ul li a {
@@ -635,11 +638,6 @@ section.productsRow {
 
 .productsContainer ul {
     margin-top: 10px;
-}
-
-.productsContainer ul li {
-    font-size: 0.8em;
-    color: black;
 }
 
 .products-bottom p {
