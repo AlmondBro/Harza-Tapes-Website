@@ -780,3 +780,7 @@ p.extraContactInfo a,
 p.extraContactInfo a:hover {
     color: black;
 }
+
+p.form-field-message {
+    font-style: italic;
+}
