@@ -497,6 +497,11 @@ footer {
     color: white;
 }
 
+#footer-nav div a:hover {
+    color: #FFB914;
+    text-decoration: none;
+}
+
 .footer-contact {
     color: white;
 }

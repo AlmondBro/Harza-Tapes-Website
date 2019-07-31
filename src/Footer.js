@@ -1,7 +1,7 @@
 import React from 'react';
 
 //Import Link from React Router
-import { Link } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 import FontAwesome from 'react-fontawesome';
 
 const Footer = (props) => {
@@ -9,19 +9,19 @@ const Footer = (props) => {
         <footer className="container-fluid no-padding">
             <section id="footer-nav" className="row">
                 <div className="col-sm-2">
-                    <Link to="/home">Home</Link> 
+                    <Link activeClassName="navLink-current" to="/home">Home</Link> 
                 </div>
                 <div className="col-sm-2">
-                    <Link to="/about-us">About Us</Link> 
+                    <Link activeClassName="navLink-current" to="/about-us">About Us</Link> 
                 </div>
                 <div className="col-sm-2">
-                    <Link to="/products">Products</Link>    
+                    <Link activeClassName="navLink-current" to="/products">Products</Link>    
                 </div>
                 <div className="col-sm-2">
-                    <Link to="/location">Location</Link> 
+                    <Link activeClassName="navLink-current" to="/location">Location</Link> 
                 </div>
                 <div className="col-sm-2">
-                    <Link to="/contact-us">Contact Us</Link>
+                    <Link activeClassName="navLink-current" to="/contact-us">Contact Us</Link>
                 </div>
             </section>
             <section id="footer-nav-misc" className="row">
