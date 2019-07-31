@@ -544,9 +544,11 @@ p#footer-designedBy {
     margin-top: 20px;
 }
 
-section.aboutUs-bestChoice div.row h5,
-section.aboutUs-bestChoice div.row img {
+.aboutUs-bestChoice h5,
+.aboutUs-bestChoice img {
     margin: 10px auto;
+    display: flex;
+    justify-content: center;
 }
 
 /* === PRODUCTS === */

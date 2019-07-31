@@ -28,7 +28,7 @@ class Contact extends Component  {
                     <fieldset>
                         <legend className="form-legend">Contact Us</legend>
                         <div className="qr-code-row row">
-                            <div className="col-md-3">
+                            <div className="col-md-6">
                                 <section>
                                     <h5>By e-mail:</h5>
                                     <p className="extraContactInfo">
@@ -47,9 +47,9 @@ class Contact extends Component  {
                                         <a 
                                             target="_blank"
                                             href="https://www.google.com/maps/place/Harza+Tapes/@33.966971,-118.0669307,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2d3b53a9cf309:0x3a23927fc824b33f!8m2!3d33.966971!4d-118.064742">
-                                            8237 Allport Ave<br/>
-                                            Santa Fe Springs,<br/>
-                                            CA 90260
+                                            8237 Allport Ave
+                                            Santa Fe Springs,
+                                            CA 90670
                                         </a>
                                     </p>
                                     <p className="extraContactInfo">
