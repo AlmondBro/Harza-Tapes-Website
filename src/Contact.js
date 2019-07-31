@@ -75,7 +75,7 @@ class Contact extends Component  {
                                 </figure>
                             </div>
                             <div className="col-md-3">
-                                <img src="./assets/img/deal.png" className="img-fluid" />
+                                <img src="./assets/img/deal.png" id="deal-image" className="img-fluid" />
                             </div>
                         </div>
                         <div className="contactContainerForm-row row">
