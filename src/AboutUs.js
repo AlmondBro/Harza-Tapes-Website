@@ -49,16 +49,20 @@ const AboutUs = (props) => {
             </section>
             <section className="aboutUs-bestChoice">
                 <div className="row">
-                    <h5>
-                        The best choice in High Quality Printed 
-                        Packaging Tapes
-                    </h5>
+                    <div className="col-sm-12 aboutUs-bestChoice">
+                        <h5>
+                            The best choice in High Quality Printed 
+                            Packaging Tapes
+                        </h5>
+                    </div>
                 </div>
                 <div className="row">
-                    <img src="./assets/img/best_choice.png" 
-                        className="img-fluid"
-                        alt="People Discussing on Table"
-                    />
+                    <div className="col-sm-12 aboutUs-bestChoice">
+                        <img src="./assets/img/best_choice.png" 
+                            className="img-fluid"
+                            alt="People Discussing on Table"
+                        />
+                    </div>
                 </div>
             </section>
            

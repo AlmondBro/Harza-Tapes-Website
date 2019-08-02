@@ -1,7 +1,7 @@
 import React from "react";
 
 //Import 3rd-party packages
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 import FontAwesome from 'react-fontawesome';
 
 //Import 3rd-party packages
@@ -22,11 +22,11 @@ const Navigation = (props) => {
                 <NavbarToggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Link to="/home" className="navLinks nav-link">Home</Link> 
-                        <Link to="/about-us" className="navLinks nav-link">About Us</Link> 
-                        <Link to="/products" className="navLinks nav-link">Products</Link> 
-                        <Link to="/location" className="navLinks nav-link">Location</Link> 
-                        <Link to="/contact-us" className="navLinks nav-link">Contact Us</Link> 
+                        <Link activeClassName="navLink-current" to="/home" className="navLinks nav-link">Home</Link> 
+                        <Link activeClassName="navLink-current" to="/about-us" className="navLinks nav-link">About Us</Link> 
+                        <Link activeClassName="navLink-current" to="/products" className="navLinks nav-link">Products</Link> 
+                        <Link activeClassName="navLink-current" to="/location" className="navLinks nav-link">Location</Link> 
+                        <Link activeClassName="navLink-current" to="/contact-us" className="navLinks nav-link">Contact Us</Link> 
 
                         {/* <Nav.Link href="/home" className="navLinks">Home</Nav.Link>
                         <Nav.Link href="/about-us" className="navLinks">About Us</Nav.Link>
