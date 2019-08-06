@@ -107,6 +107,66 @@ main.page-content {
     position: absolute;
 }
 
+.mobileFixedIcons {
+    display: none;
+	font-size: 2em;
+	width: auto;
+	position: fixed;
+	z-index: 1;
+	top: 90%;
+	left: 5%;
+	padding: 10px;
+	border-radius: 30px;
+    border-width: 3px; 
+    border-style: solid;
+}
+
+#mobileEmail-fixedIcon {
+    left: 80%;
+}
+
+@media only screen and (max-width: 830px) {
+    .mobileFixedIcons {
+        display: block;
+    }
+
+    #root header.headerAndNav {
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .switch-wrapper {
+        margin-top: 111px; /* Equal to the height of the header*/
+    }
+
+    #root header.headerAndNav {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+    }
+}
+
+.whiteBG-greenBorder {
+    color: green;
+    background-color: white;
+    border-color: green;
+}
+
+.greenBG-whiteBorder {
+    color: white;
+    background-color: green;
+    border-color: white;
+}
+
+.greenShadow {
+    -webkit-box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
+    -moz-box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
+    box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
+}
+
 /* === HEADER === */
 
 header.headerAndNav {
