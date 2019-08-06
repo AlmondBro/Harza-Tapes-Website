@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 
 
@@ -18,26 +18,30 @@ import Contact from "./Contact.js";
 
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
+import { NavLink as Link } from "react-router-dom";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <FontAwesome name="phone" 
-                     className="mobileFixedIcons 
-                                greenBG-whiteBorder
-                                greenShadow" 
+        <a href="tel:1-562-696-0282">
+          <FontAwesome name="phone"
+                      className="mobileFixedIcons
+                      whiteBG-greenBorder
+                      greenShadow"
                       title="Call Harza Tapes"
-        />
+          />
+        </a>
 
-      <FontAwesome name="envelope"
-                   className="mobileFixedIcons 
-                                greenBG-whiteBorder
-                                greenShadow" 
-                  id="mobileEmail-fixedIcon"
-                  title="E-mail Harza Tapes"
-                    
-        />
+        <a href="mailto:sales@harzatapes.com">
+          <FontAwesome name="envelope"
+                      className="mobileFixedIcons
+                      whiteBG-greenBorder
+                      greenShadow"
+                      id="mobileEmail-fixedIcon"
+                      title="E-mail Harza Tapes"
+          />
+        </a>
       </div>
       <HeaderAndNav />
       <PageContent>
@@ -47,8 +51,13 @@ const App = () => {
           atActive={{ opacity: 1 }}
           className="switch-wrapper"
         >
-          <Route exact path="/" component={Home} />
-          {/* <Route path="/home" component={Home} /> */}
+          <Route exact path="/" 
+                       render={ () => (
+                                          <Redirect to="/home" />
+                                      )
+                                } 
+          />
+          <Route path="/home" component={Home} />
           <Route path="/about-us" component={AboutUs} />
           <Route path="/products" component={Products} />
           <Route path="/location" component={Location} />

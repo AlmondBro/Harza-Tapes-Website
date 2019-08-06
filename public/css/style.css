@@ -129,18 +129,12 @@ main.page-content {
     .mobileFixedIcons {
         display: block;
     }
-
-    #root header.headerAndNav {
-        position: fixed;
-        width: 100%;
-        z-index: 1;
-    }
 }
 
 @media only screen and (max-width: 575px) {
-    .switch-wrapper {
-        margin-top: 111px; /* Equal to the height of the header*/
-    }
+    /* .switch-wrapper { */
+        /* margin-top: 111px; Equal to the height of the header */
+    /* } */
 
     #root header.headerAndNav {
         position: relative;
@@ -159,6 +153,7 @@ main.page-content {
     color: white;
     background-color: green;
     border-color: white;
+    /* blue - #0087db */
 }
 
 .greenShadow {
@@ -720,6 +715,10 @@ section.productsRow {
 
 #poly {
     margin-right: 15px;
+}
+
+.products-bottom.row {
+    padding: 5px 15px;
 }
 
 /* === LOCATIONS === */

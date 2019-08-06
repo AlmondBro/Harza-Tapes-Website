@@ -22,10 +22,10 @@ const Navigation = (props) => {
                 <NavbarToggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Link activeClassName="navLink-current" to="/" className="navLinks nav-link">Home</Link> 
+                        <Link activeClassName="navLink-current" to="/home" className="navLinks nav-link">Home</Link> 
                         <Link activeClassName="navLink-current" to="/about-us" className="navLinks nav-link">About Us</Link> 
                         <Link activeClassName="navLink-current" to="/products" className="navLinks nav-link">Products</Link> 
-                        <Link activeClassName="navLink-current" to="/location" className="navLinks nav-link">Location</Link> 
+                        <Link activeClassName="navLink-current" to="/location" className="navLinks nav-link">Locations</Link> 
                         <Link activeClassName="navLink-current" to="/contact-us" className="navLinks nav-link">Contact Us</Link> 
 
                         {/* <Nav.Link href="/home" className="navLinks">Home</Nav.Link>
