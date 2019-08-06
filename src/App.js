@@ -27,8 +27,8 @@ const App = () => {
         <a href="tel:1-562-696-0282">
           <FontAwesome name="phone"
                       className="mobileFixedIcons
-                      whiteBG-greenBorder
-                      greenShadow"
+                      purpleBG-greenBorder
+                      purpleShadow"
                       title="Call Harza Tapes"
           />
         </a>
@@ -36,8 +36,8 @@ const App = () => {
         <a href="mailto:sales@harzatapes.com">
           <FontAwesome name="envelope"
                       className="mobileFixedIcons
-                      whiteBG-greenBorder
-                      greenShadow"
+                      purpleBG-greenBorder
+                      purpleShadow"
                       id="mobileEmail-fixedIcon"
                       title="E-mail Harza Tapes"
           />

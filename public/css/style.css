@@ -156,10 +156,22 @@ main.page-content {
     /* blue - #0087db */
 }
 
+.purpleBG-greenBorder {
+	color: white;
+	background-color: #091e8f;
+	border-color: white;
+}
+
 .greenShadow {
     -webkit-box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
     -moz-box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
     box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
+}
+
+.purpleShadow {
+    -webkit-box-shadow: 3px 3px 33px 1px rgba(0,143,232,1);
+    -moz-box-shadow: 3px 3px 33px 1px rgba(0,143,232,1);
+    box-shadow: 3px 3px 33px 1px rgba(0,143,232,1);
 }
 
 /* === HEADER === */
