@@ -16,7 +16,14 @@ const Navigation = (props) => {
     return (
         <Navbar bg="green" variant="dark" expand="sm" className="navbar">
                 <Navbar.Brand className="collapsedNav-logo">
-                    <img src="/assets/img/harza-tapes-logo.svg" alt="Harza Tapes" />
+                    <Link to="/home"
+                          title="Home"
+                    >
+                        <img src="/assets/img/harza-tapes-logo.svg" 
+                             alt="Harza Tapes" 
+                             title="Home"
+                        />
+                    </Link>
                 </Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <NavbarToggle aria-controls="basic-navbar-nav" />
