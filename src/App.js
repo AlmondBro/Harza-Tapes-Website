@@ -28,7 +28,7 @@ const App = () => {
           className="switch-wrapper"
         >
           <Route exact path="/" component={Home} />
-          <Route path="/home" component={Home} />
+          {/* <Route path="/home" component={Home} /> */}
           <Route path="/about-us" component={AboutUs} />
           <Route path="/products" component={Products} />
           <Route path="/location" component={Location} />
