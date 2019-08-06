@@ -9,7 +9,7 @@ const Footer = (props) => {
         <footer className="container-fluid no-padding">
             <section id="footer-nav" className="row">
                 <div className="col-sm-2">
-                    <Link activeClassName="navLink-current" to="/home">Home</Link> 
+                    <Link activeClassName="navLink-current" to={"/home" || "/" }>Home</Link> 
                 </div>
                 <div className="col-sm-2">
                     <Link activeClassName="navLink-current" to="/about-us">About Us</Link> 
