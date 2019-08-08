@@ -156,10 +156,22 @@ main.page-content {
     /* blue - #0087db */
 }
 
+.purpleBG-greenBorder {
+	color: white;
+	background-color: #091e8f;
+	border-color: white;
+}
+
 .greenShadow {
     -webkit-box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
     -moz-box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
     box-shadow: 3px 3px 33px 1px rgba(0,93,23,1);
+}
+
+.purpleShadow {
+    -webkit-box-shadow: 3px 3px 33px 1px rgba(0,143,232,1);
+    -moz-box-shadow: 3px 3px 33px 1px rgba(0,143,232,1);
+    box-shadow: 3px 3px 33px 1px rgba(0,143,232,1);
 }
 
 /* === HEADER === */
@@ -523,6 +535,27 @@ div.needAQuote-box {
     cursor: pointer; 
 }
 
+div.styles_modal__gNwvD {
+	max-width: 800px;
+	position: relative;
+	padding: 0.5rem;
+	background-color: rgba(82, 154, 63, 0.7);
+	background-clip: padding-box;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+	margin: 0 auto;
+}
+
+svg.styles_closeIcon__1QwbI {
+	background-color: white;
+	color: #529a3f;
+	border: 3px solid green;
+	border-radius: 2em;
+}
+
+#custom-tapes-ad {
+    width: 650px;
+}
+
 /* === FOOTER === */
 footer {
     font-size: 0.8em;
@@ -803,6 +836,10 @@ div.qr-code-row {
 
 div.contactContainerForm-row {
     padding: 15px;
+}
+
+p.extraContactInfo a:hover {
+    text-decoration: underline;
 }
 
 .contact-container form fieldset p.formfield {
