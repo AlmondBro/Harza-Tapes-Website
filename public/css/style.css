@@ -535,6 +535,27 @@ div.needAQuote-box {
     cursor: pointer; 
 }
 
+div.styles_modal__gNwvD {
+	max-width: 800px;
+	position: relative;
+	padding: 0.5rem;
+	background-color: rgba(82, 154, 63, 0.7);
+	background-clip: padding-box;
+	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
+	margin: 0 auto;
+}
+
+svg.styles_closeIcon__1QwbI {
+	background-color: white;
+	color: #529a3f;
+	border: 3px solid green;
+	border-radius: 2em;
+}
+
+#custom-tapes-ad {
+    width: 650px;
+}
+
 /* === FOOTER === */
 footer {
     font-size: 0.8em;
