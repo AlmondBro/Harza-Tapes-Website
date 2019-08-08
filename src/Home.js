@@ -2,6 +2,9 @@ import React from 'react';
 
 //Import components
 import Slideshow from './Slideshow.js';
+
+import FoodGradeTapesModal from './FoodGradeTapesModal.js';
+
 const Home = (props) => {
     return (
         <div className="container">
@@ -29,10 +32,7 @@ const Home = (props) => {
                 </div>
             </div> 
             <div className="row">
-                <div className="col-md">
-                    <p id="foodGradeTapes">Click here for info on our Food Grade Tapes</p>
-                    <p id="customPrintedTapes">CUSTOM PRINTED TAPES FOR DIRECT <br/>CONTACT WITH FOOD!!</p>
-                </div>
+                <FoodGradeTapesModal />
                 <div className="col-md">
                     <img src="./assets/img/2019-PMA-SUMMIT.jpg"
                          className="img-fluid" />
