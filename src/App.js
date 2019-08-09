@@ -1,8 +1,7 @@
 import React from 'react';
 
 import { Route, BrowserRouter, Redirect } from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
-
+import { AnimatedSwitch as Switch } from 'react-router-transition';
 
 //Import components
 import HeaderAndNav from "./HeaderAndNav.js"
@@ -45,7 +44,7 @@ const App = () => {
       </div>
       <HeaderAndNav />
       <PageContent>
-        <AnimatedSwitch
+        <Switch
           atEnter={{ opacity: 0 }}
           atLeave={{ opacity: 0 }}
           atActive={{ opacity: 1 }}
@@ -62,7 +61,7 @@ const App = () => {
           <Route path="/products" component={Products} />
           <Route path="/location" component={Location} />
           <Route path="/contact-us" component={Contact} />
-        </AnimatedSwitch>
+        </Switch>
       </PageContent>
       <Footer />
     </BrowserRouter>
