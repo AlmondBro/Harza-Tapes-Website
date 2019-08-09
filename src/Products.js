@@ -7,7 +7,7 @@ import { NavLink as Link } from "react-router-dom";
 
 const FourSquareProductsPane = (props) => {
     return (
-        <main className="margin-center">
+        <main className="">
             <section className="productsRow row no-gutters">
                 <div className="productsContainer no-border col-sm-5">
                     <img src="/assets/img/custom-printed-tape.jpg" 
