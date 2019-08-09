@@ -88,6 +88,19 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dc0181', endColorstr='#005cbe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
+.flex-center {
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-self: center;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
 main.page-content {
     min-height: 100%;
     display: flex;
@@ -535,6 +548,21 @@ div.needAQuote-box {
     cursor: pointer; 
 }
 
+div.styles_overlay__CLSq- {
+	background: rgba(21, 38, 16, 0.8);
+	display: flex;
+	align-items: flex-start;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	z-index: 1000;
+	padding: 1.2rem;
+}
+
 div.styles_modal__gNwvD {
 	max-width: 800px;
 	position: relative;
@@ -704,11 +732,16 @@ aside.products-sidebar ul li h3 {
 .products-sidebar ul li ul li {
     list-style: unset;
 }
+.no-border,
+.productsContainer.no-border {
+    border: none; 
+}
 
 .productsContainer {
     padding: 30px;
     padding-top: 0px;
-    /* border: 1px solid black; */
+    border: 1px solid black;
+    margin: 2px 5px;
 }
 
 .productsContainer ul li::before {
@@ -752,6 +785,13 @@ section.productsRow {
 
 .products-bottom.row {
     padding: 5px 15px;
+}
+
+h4.sideProducts {
+    font-size: 1.15em;
+    color: #EA6010;
+    text-align: center;
+    margin-top: 0.5em;
 }
 
 /* === LOCATIONS === */

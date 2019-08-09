@@ -9,7 +9,7 @@ const Header = (props) => {
             <header className="header">
                 <div className ="headerImage-quote-container">
                     <img className="animated bounceInDown header-image" 
-                        src="./assets/img/harza-tapes-logo.svg" 
+                        src="/assets/img/harza-tapes-logo.svg" 
                         alt="Harza Tapes" />
                     <p className="animated fadeIn header-slogan">Your best choice in Printed Packaging Tapes</p>
                 </div>
