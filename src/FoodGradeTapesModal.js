@@ -29,7 +29,7 @@ class FoodGradeTapesModal extends Component {
             center>
           <img className="img-fluid"
                id="custom-tapes-ad"
-               src="./assets/img/Food_Grade_Tape.jpg" 
+               src="/assets/img/Food_Grade_Tape.jpg" 
                alt="Food Grade Tape Printing Features -- Up to 5 colors, Lock Print" 
         />
         </Modal>
