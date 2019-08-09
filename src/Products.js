@@ -127,10 +127,10 @@ const TapeDispensers = ({ match }) => {
     );
 }; //end TapeDispensers
 
-const Products = ({ match }) => {
+const ProductsSidebar = (props) => {
+    let { match } = props;
     return (
-        <div className="productsPage container">
-            <div className="row">
+        <div className="row">
                 <div className="col-md-3">
                     <aside className="products-sidebar">
                         <ul>
@@ -154,6 +154,15 @@ const Products = ({ match }) => {
                         </ul>
                     </aside>
                 </div>
+              {props.children}
+            </div>
+    );
+};
+
+const Products = ({ match }) => {
+    return (
+        <div className="productsPage container">
+            <ProductsSidebar match={match}>
                 <Switch
                     atEnter={{ opacity: 0 }}
                     atLeave={{ opacity: 0 }}
@@ -166,7 +175,7 @@ const Products = ({ match }) => {
                     <Route path={`${match.path}/dispensers`} component={TapeDispensers} />                    
                     <Route component={FourSquareProductsPane} />
                 </Switch>
-            </div>
+            </ProductsSidebar>
             <section className="products-bottom row">
                 <p>Please contact us if you do not see the kind of tape
                     that you are looking for. 
