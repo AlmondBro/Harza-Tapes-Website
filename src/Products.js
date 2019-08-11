@@ -7,9 +7,9 @@ import { NavLink as Link } from "react-router-dom";
 
 const FourSquareProductsPane = (props) => {
     return (
-        <main className="">
+        <main className="col-md-8 margin-center">
             <section className="productsRow row no-gutters">
-                <div className="productsContainer no-border col-sm-5">
+                <diuv className="productsContainer col-sm-5">
                     <img src="/assets/img/custom-printed-tape.jpg" 
                         alt="Custom Printed Tape" 
                         className="img-fluid flex-img-center" 
@@ -19,8 +19,8 @@ const FourSquareProductsPane = (props) => {
                         <li>White, Clear, or Tan Polypropylene Tape</li>
                         <li>No Artwork Charge</li>
                     </ul>
-                </div>
-                <div className="productsContainer no-border col-sm-5">
+                </diuv>
+                <div className="productsContainer col-sm-5">
                     <img src="/assets/img/stock-printed-tape.jpg" 
                         alt="Stock Printed Tape" 
                         className="img-fluid flex-img-center" 
@@ -38,17 +38,17 @@ const FourSquareProductsPane = (props) => {
                 </div>
             </section>
             <section className="productsRow row no-gutters">
-                <div className="productsContainer no-border col-sm-5">
+                <div className="productsContainer col-sm-5">
                     <img src="/assets/img/plain-packaging-tape.jpg" 
                         alt="Carton (Plain) Sealing Tape" 
                         className="img-fluid flex-img-center" 
                     />
                     <ul>
-                        <li>Clear, White, Tan, & Colored <br/><span id="poly">&emsp; Polypropylene Tapes</span></li>
+                        <li>Clear, White, Tan, & Colored <span id="poly">Polypropylene Tapes</span></li>
                         <li>Flat Back Paper Tape</li>
                     </ul>
                 </div>
-                <div className="productsContainer no-border col-sm-5">
+                <div className="productsContainer col-sm-5">
                     <img src="/assets/img/tape-dispensers.jpg" 
                         alt="Tape Dispensers" 
                         className="img-fluid flex-img-center" 
@@ -131,24 +131,24 @@ const ProductsSidebar = (props) => {
     let { match } = props;
     return (
         <div className="row">
-                <div className="col-md-3">
+                <div className="col-md-4 no-padding">
                     <aside className="products-sidebar">
                         <ul>
                             <li id="ourProducts-header-li"><h3>Our Products</h3></li>
-                            <li><Link to={`${match.path}`}>Custom Printed Tapes</Link></li>
-                            <li><a href="#">Stock Printed Tapes</a></li>
+                            {/* <li><Link to={`${match.path}`}>Custom Printed Tapes</Link></li> */}
+                            <li><Link to={`${match.path}`}>Custom/Stock Printed Tapes</Link></li>
                             <li><Link to={`${match.path}/carton-sealing-tapes`}>Carton Sealing Tapes</Link>
                                 <ul>
-                                    <li><a href="#">Acrylic</a></li>
-                                    <li><a href="#">Hot Melt</a></li>
-                                    <li><a href="#">Color</a></li>
-                                    <li><a href="#">Flat Back Paper</a></li>
+                                    <li><a href="#" className="no-underline no-cursor">Acrylic</a></li>
+                                    <li><a href="#" className="no-underline no-cursor">Hot Melt</a></li>
+                                    <li><a href="#" className="no-underline no-cursor">Color</a></li>
+                                    <li><a href="#" className="no-underline no-cursor">Flat Back Paper</a></li>
                                 </ul>
                             </li>
                             <li><Link to={`${match.path}/dispensers`}>Dispensers</Link>
                                 <ul>
-                                    <li><a href="#">Multi-roll</a></li>
-                                    <li><a href="#">Pistol Grip</a></li>
+                                    <li><a href="#" className="no-underline no-cursor">Multi-roll</a></li>
+                                    <li><a href="#" className="no-underline no-cursor">Pistol Grip</a></li>
                                 </ul>
                             </li>
                         </ul>
