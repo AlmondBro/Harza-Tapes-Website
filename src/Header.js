@@ -8,9 +8,17 @@ const Header = (props) => {
         <section className="header-section">
             <header className="header">
                 <div className ="headerImage-quote-container">
-                    <img className="animated bounceInDown header-image" 
-                        src="/assets/img/harza-tapes-logo.svg" 
-                        alt="Harza Tapes" />
+                    <div className="header-logo-container">
+                        <img className="animated bounceInDown header-image"
+                                src="/assets/img/harza-tapes-logo.svg"
+                                alt="Harza Tapes" />
+                        <a href="https://www.cintandina.com/en/index_en.html">
+                            <img className="animated bounceInDown header-image"
+                                    id="second-logo"
+                                    src="/assets/img/cintandina-logo.svg"
+                                    alt="Cintandina" />
+                        </a>
+                    </div>
                     <p className="animated fadeIn header-slogan">Your best choice in Printed Packaging Tapes</p>
                 </div>
         
