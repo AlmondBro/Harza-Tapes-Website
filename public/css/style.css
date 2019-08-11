@@ -705,6 +705,12 @@ p#footer-designedBy {
     justify-content: center;
 }
 
+p.justify-right,
+.justify-right {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
 /* === PRODUCTS === */
 .col-md-3.no-padding,
 .no-padding {

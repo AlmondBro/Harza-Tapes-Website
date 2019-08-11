@@ -5,7 +5,7 @@ const AboutUs = (props) => {
         <div className="aboutUs-container container">
             <section className="row">
                 <h2 className="aboutUs-header">Harza Tapes &mdash; About Us</h2>
-                <p> Harza Tapes is the result of a vision of one of 
+                <p className="justify-right"> Harza Tapes is the result of a vision of one of 
                     South America’s most important tape manufacturers, 
                     Cintandina S.A., a Colombian company with over 50 
                     years of experience in the pressure sensitive tape 
@@ -15,7 +15,7 @@ const AboutUs = (props) => {
                     Harza Tapes in California, USA, the company brings 
                     excellence and value in printed tapes to North 
                     America.</p>
-                <p>Cintandina is certified under ISO 9001 and its products 
+                <p className="justify-right">Cintandina is certified under ISO 9001 and its products 
                     qualify under a number of international standards 
                     including those of the USA. It employs state-of-the art 
                     processing equipment unexcelled by any tape manufacturer 
@@ -29,7 +29,7 @@ const AboutUs = (props) => {
             <section className="visionMission-container row">
                 <div className="aboutUs-subSection col-sm-6">
                     <h3>Mission</h3>
-                    <p>
+                    <p className="justify-right">
                         To work as partners with our clients by offering 
                         pressure sensitive adhesive tape products and 
                         related services which provide real value.
@@ -37,7 +37,7 @@ const AboutUs = (props) => {
                 </div>
                 <div className="aboutUs-subSection col-sm-6">
                     <h3>Vision</h3>
-                    <p>
+                    <p className="justify-right">
                         To strive for the well being and quality of 
                         life for our people; to increase the value we 
                         add to our customers’ businesses; to be good 
