@@ -66,7 +66,7 @@ const FourSquareProductsPane = (props) => {
 
 const CartonSealingTapes = ({ match }) => {
     return (
-        <main className="flex-center">
+        <main className="col-md-8 flex-center">
             <section className="productsRow row no-gutters">
                 <div className="productsContainer col-sm-5">
                     <img src="/assets/img/prd-acrylic.jpg" 
