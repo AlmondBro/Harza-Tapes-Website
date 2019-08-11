@@ -11,7 +11,7 @@ const Location = (props) => {
             </h3>
             <div className="row">
                 <div className="locationBox col-sm-5">
-                    <h4>U.S.A. 🇺🇸</h4> 
+                    <h4>U.S.A. <span className="location-flag">🇺🇸</span></h4> 
                     <h5>Harza Tapes</h5>
                     <p>
                         <a 
@@ -39,7 +39,7 @@ const Location = (props) => {
                             />www.harzatapes.com</a></p>
                 </div>
                 <div className="locationBox col-sm-5">
-                    <h4>Colombia 🇨🇴</h4>
+                    <h4>Colombia <span className="location-flag">🇨🇴</span></h4>
                     <h5>Cintandina</h5>
                     <p>
                         <a href="" className="locationLink">
@@ -71,7 +71,7 @@ const Location = (props) => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://www.cintandina.com">
+                        <a href="https://www.cintandina.com/en/index_en.html">
                             <FontAwesome name='globe' 
                                         className="quote-phone-icon" 
                             /> www.cintandina.com
@@ -81,7 +81,7 @@ const Location = (props) => {
             </div>
             <div className="row">
                 <div className="locationBox col-sm-5">
-                    <h4>Costa Rica 🇨🇷</h4>
+                    <h4>Costa Rica <span className="location-flag">🇨🇷</span></h4>
                     <h5>Cintandina</h5>
                     {/* <p>La Uruca Frente a Mercedes Benz</p> */}
                     <p>
@@ -108,7 +108,7 @@ const Location = (props) => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://www.cintandina.com">
+                        <a href="https://www.cintandina.com/en/index_en.html">
                         <FontAwesome name='globe' 
                                         className="quote-phone-icon" 
                         /> 
@@ -117,7 +117,7 @@ const Location = (props) => {
                     </p>
                 </div>
                 <div className="locationBox col-sm-5">
-                    <h4>Ecuador 🇪🇨</h4>
+                    <h4>Ecuador <span className="location-flag">🇪🇨</span></h4>
                     <h5>Cintandina</h5>
                     <p>
                         <a href="" className="locationLink">
@@ -152,7 +152,7 @@ const Location = (props) => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://www.cintandina.com">
+                        <a href="https://www.cintandina.com/en/index_en.html">
                             <FontAwesome name='globe' 
                                             className="quote-phone-icon" 
                             /> 

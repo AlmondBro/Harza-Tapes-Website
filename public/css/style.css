@@ -859,6 +859,10 @@ h4.sideProducts {
     color: white;
 }
 
+.location-flag {
+    margin-left: 6px;
+}
+
 .locationBox p {
     line-height: 1em;
 }
