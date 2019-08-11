@@ -44,8 +44,10 @@ const Home = (props) => {
             <div className="row">
                 <FoodGradeTapesModal />
                 <div className="col-md">
-                    <img src="./assets/img/2019-PMA-SUMMIT.jpg"
-                         className="img-fluid" />
+                    <a href="" target="_blank">
+                        <img src="./assets/img/2019-PMA-SUMMIT.jpg"
+                            className="img-fluid" />
+                    </a>
                 </div>
             </div>
         </div> 
