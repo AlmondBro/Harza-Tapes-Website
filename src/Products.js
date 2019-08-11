@@ -28,10 +28,10 @@ const FourSquareProductsPane = (props) => {
                     <ul>
                         <li>Tapes with Preprinted Messages
                             <ul>
-                                <li>
+                                <li className="sameSize-subBullet" id="prevent-pilferage">
                                     To prevent pilferage
                                 </li>
-                                <li>To inform handlers of care</li>
+                                <li className="sameSize-subBullet" id="inform-handlers">To inform handlers of care</li>
                             </ul>
                         </li>
                     </ul>

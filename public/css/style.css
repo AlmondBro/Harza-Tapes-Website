@@ -705,7 +705,6 @@ a.no-cursor,
     cursor: default;
 }
 
-
 .productsPage {
     margin-top: 15px;
 }
@@ -757,6 +756,12 @@ aside.products-sidebar ul li h3 {
 
 .products-sidebar ul li ul li {
     list-style: unset;
+}
+
+li#prevent-pilferage,
+li#inform-handlers,
+ul li.sameSize-subBullet {
+    font-size: 0.95em;
 }
 
 .no-border,
