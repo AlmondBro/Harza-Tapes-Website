@@ -7,7 +7,7 @@ import FontAwesome from 'react-fontawesome';
 const Footer = (props) => {
     return (
         <footer className="container-fluid no-padding">
-            <section id="footer-nav" className="row">
+            <section id="footer-nav" className="flex-center-row row">
                 <div className="col-sm-2">
                     <Link activeClassName="navLink-current" to={"/home" || "/" }>Home</Link> 
                 </div>
