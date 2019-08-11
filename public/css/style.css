@@ -773,7 +773,7 @@ ul li.sameSize-subBullet {
     padding: 5px;
     padding-top: 15px;
     border: 1px solid black;
-    margin: 6px 5px;
+    margin: 15px 5px;
 }
 
 .productsContainer ul li::before {
