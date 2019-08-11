@@ -71,7 +71,7 @@ const Location = (props) => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://www.cintandina.com/en/index_en.html">
+                        <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
                             <FontAwesome name='globe' 
                                         className="quote-phone-icon" 
                             /> www.cintandina.com
@@ -108,7 +108,7 @@ const Location = (props) => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://www.cintandina.com/en/index_en.html">
+                        <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
                         <FontAwesome name='globe' 
                                         className="quote-phone-icon" 
                         /> 
@@ -152,7 +152,7 @@ const Location = (props) => {
                         </a>
                     </p>
                     <p>
-                        <a href="https://www.cintandina.com/en/index_en.html">
+                        <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
                             <FontAwesome name='globe' 
                                             className="quote-phone-icon" 
                             /> 

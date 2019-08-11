@@ -2,15 +2,27 @@ import React from 'react';
 
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
+import { NavLink as Link } from 'react-router-dom';
+
 
 const Header = (props) => {
     return (
         <section className="header-section">
             <header className="header">
                 <div className ="headerImage-quote-container">
-                    <img className="animated bounceInDown header-image" 
-                        src="/assets/img/harza-tapes-logo.svg" 
-                        alt="Harza Tapes" />
+                    <div className="header-logo-container">
+                        <Link to="/home">
+                            <img className="animated bounceInDown header-image"
+                                    src="/assets/img/harza-tapes-logo.svg"
+                                    alt="Harza Tapes" />
+                        </Link>
+                        <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
+                            <img className="animated bounceInDown header-image"
+                                    id="second-logo"
+                                    src="/assets/img/cintandina-logo.svg"
+                                    alt="Cintandina" />
+                        </a>
+                    </div>
                     <p className="animated fadeIn header-slogan">Your best choice in Printed Packaging Tapes</p>
                 </div>
         
