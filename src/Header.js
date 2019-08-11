@@ -11,9 +11,11 @@ const Header = (props) => {
             <header className="header">
                 <div className ="headerImage-quote-container">
                     <div className="header-logo-container">
-                        <Link to="/home"><img className="animated bounceInDown header-image"
-                        src="/assets/img/harza-tapes-logo.svg"
-                        alt="Harza Tapes" /></Link>
+                        <Link to="/home">
+                            <img className="animated bounceInDown header-image"
+                                    src="/assets/img/harza-tapes-logo.svg"
+                                    alt="Harza Tapes" />
+                        </Link>
                         <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
                             <img className="animated bounceInDown header-image"
                                     id="second-logo"
