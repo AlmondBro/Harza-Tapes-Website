@@ -7,7 +7,7 @@ import FontAwesome from 'react-fontawesome';
 const Footer = (props) => {
     return (
         <footer className="container-fluid no-padding">
-            <section id="footer-nav" className="row">
+            <section id="footer-nav" className="flex-center-row row">
                 <div className="col-sm-2">
                     <Link activeClassName="navLink-current" to={"/home" || "/" }>Home</Link> 
                 </div>
@@ -24,7 +24,7 @@ const Footer = (props) => {
                     <Link activeClassName="navLink-current" to="/contact-us">Contact Us</Link>
                 </div>
             </section>
-            <section id="footer-nav-misc" className="row">
+            {/* <section id="footer-nav-misc" className="row">
                 <div className="col-sm-6">
                     <FontAwesome name="sitemap" 
                                 className="footer-contact-icon"
@@ -37,7 +37,7 @@ const Footer = (props) => {
                     />
                     <a href="#">Bookmark Our Site</a>
                 </div>
-            </section>
+            </section> */}
             <section id="contactSession" className="row">
                 <div className="col-sm-6">
                     <p className="footer-contact">
@@ -81,7 +81,7 @@ const Footer = (props) => {
                         <FontAwesome name="paint-brush" 
                                     className="footer-contact-icon"
                         /> Designed by Harza Tapes 
-                        <span> (Last Update &mdash; June 2019)</span>
+                        <span> (Last Update &mdash; August 2019)</span>
                     </p>
                 </div>
             </section>
