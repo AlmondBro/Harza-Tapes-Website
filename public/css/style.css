@@ -684,9 +684,28 @@ p#footer-designedBy {
 
 /* === ABOUT US === */
 .aboutUs-container {
+    position: relative;
+    z-index: 1;
     /* padding: 40px 80px; */
     padding: 5% 10%;
     padding-bottom: 0px;
+}
+
+.aboutUs-container .row::before {
+	background-image: url("../assets/img/cintandina-logo.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	z-index: -1;
+	top: 0px;
+	bottom: 210px;
+	left: 0;
+	right: 0;
+	opacity: 0.02;
+	width: 300px;
+	background-position: center;
+	margin: 0 auto;
+	max-width: 100%;
 }
 
 .aboutUs-header {
