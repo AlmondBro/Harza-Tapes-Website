@@ -684,9 +684,28 @@ p#footer-designedBy {
 
 /* === ABOUT US === */
 .aboutUs-container {
+    position: relative;
+    z-index: 1;
     /* padding: 40px 80px; */
     padding: 5% 10%;
     padding-bottom: 0px;
+}
+
+.aboutUs-container .row::before {
+	background-image: url("../assets/img/cintandina-logo.svg");
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	z-index: -1;
+	top: 0px;
+	bottom: 210px;
+	left: 0;
+	right: 0;
+	opacity: 0.02;
+	width: 300px;
+	background-position: center;
+	margin: 0 auto;
+	max-width: 100%;
 }
 
 .aboutUs-header {
@@ -703,6 +722,12 @@ p#footer-designedBy {
     margin: 10px auto;
     display: flex;
     justify-content: center;
+}
+
+p.justify-right,
+.justify-right {
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 /* === PRODUCTS === */
@@ -856,6 +881,8 @@ h4.sideProducts {
     justify-content: center;
 }
  .locationBox {
+    position: relative;
+    z-index: 1;
 	text-align: center;
 	margin: 5px;
 	text-align: center;
@@ -867,6 +894,24 @@ h4.sideProducts {
     background-color: rgba(106, 179, 53, 0.05 );
     /* background: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HKxta86in0ls1we/videoblocks-griffith-observatory-and-downtown-los-angeles-day-to-night-transition-timelapse_hsjbqawnl_thumbnail-full01.png");
     background-size: contain; */
+}
+
+.locationBox::before {
+	/* background-image: url("https://i.pinimg.com/originals/88/ca/02/88ca022f0551dbcc06c19943acebe790.jpg"); */
+	background-repeat: no-repeat;
+	position: absolute;
+	content: "";
+	z-index: -1;
+	top: 0px;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	opacity: 0.12;
+	width: 100%;
+	background-position: center;
+	margin: 0 auto;
+    max-width: 100%;
+    opacity: 0.14;
 }
 
 .locationBox h4 {
@@ -889,6 +934,25 @@ h4.sideProducts {
 
 div.locationBox p a.locationLink {
     line-height: 1.2em;
+}
+
+#locationBox-USA::before {
+    background-image: url("../assets/img/peopleWalking-hollywood.jpg");
+    /* opacity: 0.15; */
+}
+
+#locationBox-Colombia::before {
+    background-image: url("../assets/img/cali-colombia.jpg");
+    /* opacity: 0.15; */
+}
+
+#locationBox-CostaRica::before {
+    background-image: url("../assets/img/costa-rica.jpg");
+    /* opacity: 0.15; */
+}
+
+#locationBox-Ecuador::before {
+    background-image: url("../assets/img/ecuador.jpg");
 }
 
 /* === CONTACT US === */

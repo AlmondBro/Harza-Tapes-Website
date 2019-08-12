@@ -10,7 +10,7 @@ const Location = (props) => {
                 Our Offices
             </h3>
             <div className="row">
-                <div className="locationBox col-sm-5">
+                <div className="locationBox col-sm-5" id="locationBox-USA">
                     <h4>U.S.A. <span className="location-flag">🇺🇸</span></h4> 
                     <h5>Harza Tapes</h5>
                     <p>
@@ -38,7 +38,7 @@ const Location = (props) => {
                                         className="quote-phone-icon" 
                             />www.harzatapes.com</a></p>
                 </div>
-                <div className="locationBox col-sm-5">
+                <div className="locationBox col-sm-5" id="locationBox-Colombia">
                     <h4>Colombia <span className="location-flag">🇨🇴</span></h4>
                     <h5>Cintandina</h5>
                     <p>
@@ -80,7 +80,7 @@ const Location = (props) => {
                 </div>
             </div>
             <div className="row">
-                <div className="locationBox col-sm-5">
+                <div className="locationBox col-sm-5" id="locationBox-CostaRica">
                     <h4>Costa Rica <span className="location-flag">🇨🇷</span></h4>
                     <h5>Cintandina</h5>
                     {/* <p>La Uruca Frente a Mercedes Benz</p> */}
@@ -116,7 +116,7 @@ const Location = (props) => {
                         </a>
                     </p>
                 </div>
-                <div className="locationBox col-sm-5">
+                <div className="locationBox col-sm-5" id="locationBox-Ecuador">
                     <h4>Ecuador <span className="location-flag">🇪🇨</span></h4>
                     <h5>Cintandina</h5>
                     <p>
