@@ -42,7 +42,10 @@ const Location = (props) => {
                     <h4>Colombia <span className="location-flag">🇨🇴</span></h4>
                     <h5>Cintandina</h5>
                     <p>
-                        <a href="" className="locationLink">
+                        <a href="https://www.google.com/maps/place/Cintandina/@3.4638006,-76.5141663,17.88z/data=!4m13!1m7!3m6!1s0x8e30a637dcadbb65:0xc3c20d01d9eb77b8!2sCra.+2+%2337-50,+Cali,+Valle+del+Cauca,+Colombia!3b1!8m2!3d3.463671!4d-76.5121491!3m4!1s0x8e30a637c52acdfb:0x5d3ec425454daa18!8m2!3d3.4637606!4d-76.5119377" 
+                            target="_blank"
+                            className="locationLink"
+                        >
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
                             /> 
@@ -85,7 +88,9 @@ const Location = (props) => {
                     <h5>Cintandina</h5>
                     {/* <p>La Uruca Frente a Mercedes Benz</p> */}
                     <p>
-                        <a href="" className="locationLink">
+                        <a href="https://www.google.com/maps/place/Diagonal+29,+San+Jos%C3%A9,+Costa+Rica/@9.9482525,-84.125851,17z/data=!4m8!1m2!2m1!1sOfibodegas+JW+%2329+San+Jose,+Costa+Rica!3m4!1s0x8fa0fb679e4673b5:0xbc84bc13a54cf9d4!8m2!3d9.9482472!4d-84.1236623" 
+                            className="locationLink"
+                            target="_blank">
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
                             /> 
@@ -120,7 +125,10 @@ const Location = (props) => {
                     <h4>Ecuador <span className="location-flag">🇪🇨</span></h4>
                     <h5>Cintandina</h5>
                     <p>
-                        <a href="" className="locationLink">
+                        <a href="https://www.google.com/maps/place/Coara/@-0.1245992,-78.483077,17z/data=!3m1!4b1!4m5!3m4!1s0x91d5856132c74529:0xde751f3c98410858!8m2!3d-0.1246046!4d-78.4808883" 
+                            className="locationLink"
+                            target="_blank"
+                        >
                             <FontAwesome name='map' 
                                             className="quote-phone-icon" 
                             /> 
