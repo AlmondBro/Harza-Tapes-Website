@@ -937,22 +937,22 @@ div.locationBox p a.locationLink {
 }
 
 #locationBox-USA::before {
-    background-image: url("https://amp.businessinsider.com/images/5aa2d4bb06b2b72a008b45c3-750-563.jpg");
+    background-image: url("../assets/img/peopleWalking-hollywood.jpg");
     /* opacity: 0.15; */
 }
 
 #locationBox-Colombia::before {
-    background-image: url("https://medellinliving.com/wp-content/uploads/2017/02/IMG_0990.jpg");
+    background-image: url("../assets/img/cali-colombia.jpg");
     /* opacity: 0.15; */
 }
 
 #locationBox-CostaRica::before {
-    background-image: url("https://www.globalexperiences.com/hs-fs/hubfs/Costa-Rica.jpg?width=1920&name=Costa-Rica.jpg");
+    background-image: url("../assets/img/costa-rica.jpg");
     /* opacity: 0.15; */
 }
 
 #locationBox-Ecuador::before {
-    background-image: url("https://www.latinoschools.com/WordpressLatinos/wp-content/uploads/2017/04/ecuador_quito_city-1-1024x555.jpg");
+    background-image: url("../assets/img/ecuador.jpg");
 }
 
 /* === CONTACT US === */
