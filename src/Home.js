@@ -10,7 +10,7 @@ import FoodGradeTapesModal from './FoodGradeTapesModal.js';
 const Home = (props) => {
     return (
         <div className="container">
-                 <Slideshow className="img-fluid"/>
+            <Slideshow className="img-fluid"/>
             <div className="row no-gutters">
                 <div className="col-sm max-width-100">
                     <Link to="/products">
