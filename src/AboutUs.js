@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutUs = (props) => {
     return (
-        <div className="aboutUs-container container">
+        <div className="aboutUs-container cintandina-ghost container">
             <section className="row">
                 <h2 className="aboutUs-header">Harza Tapes &mdash; About Us</h2>
                 <p className="justify-right"> Harza Tapes is the result of a vision of one of 
