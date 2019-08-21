@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import SmtpService from './SmtpService.js';
+//Import SMTP.js code from a file
+import SmtpService from './SmtpService.js'; 
 
 //Import state abbreviations to generate in the form
 import stateAbbreviations from "./stateAbbreviations.js";
@@ -25,7 +26,10 @@ class Contact extends Component  {
         );
     }; //end generateStateOptions
 
-    sendEmail = () => {
+    sendEmail = (e) => {
+        e.preventDefault();
+        console.log("Sending e-mail...");
+        
         let sender = "sales@harzatapes.com";
         let from ="sales@harzatapes.com";
         let subject = "New Client Message from HarzaTapes.com";
@@ -167,7 +171,7 @@ class Contact extends Component  {
                                     <input className="form-field-input" type="number" />                        
                                 </p>
                                 <p className="form-field">
-                                    <button type="submit" onSubmit={this.sendEmail}>Send</button>
+                                    <button type="submit" onSubmit={(event) => { this.sendEmail(event); } }>Send</button>
                                     <button type="reset" id="reset-button">Reset</button>
                                 </p>
                             </div>
