@@ -14,6 +14,7 @@ import AboutUs from "./AboutUs.js";
 import Products from "./Products.js";
 import Location from "./Location.js";
 import Contact from "./Contact.js";
+import NotFound404 from "./NotFound404.js";
 
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
@@ -61,6 +62,7 @@ const App = () => {
           <Route path="/products" component={Products} />
           <Route path="/location" component={Location} />
           <Route path="/contact-us" component={Contact} />
+          <Route component={NotFound404} />
         </Switch>
       </PageContent>
       <Footer />
