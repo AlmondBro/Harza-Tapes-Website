@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
+import SmtpService from './SmtpService.js';
+
 //Import state abbreviations to generate in the form
 import stateAbbreviations from "./stateAbbreviations.js";
 
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
+
 class Contact extends Component  {
     constructor(props) {
         super(props);
+    
         this.state = {
 
         };
@@ -20,6 +24,24 @@ class Contact extends Component  {
             }
         );
     }; //end generateStateOptions
+
+    sendEmail = () => {
+        let sender = "sales@harzatapes.com";
+        let from ="sales@harzatapes.com";
+        let subject = "New Client Message from HarzaTapes.com";
+        let body = `Hi`;
+
+        let sendEmail = new SmtpService();
+        sendEmail.send({
+            SecureToken : process.env.REACT_APP_SMTPJS_CRED,
+            To : sender,
+            From : from,
+            Subject : subject,
+            Body : body
+        }).then(
+          message => alert(message)
+        );
+    };
 
     render = () => {
         return (
@@ -145,7 +167,7 @@ class Contact extends Component  {
                                     <input className="form-field-input" type="number" />                        
                                 </p>
                                 <p className="form-field">
-                                    <button type="submit">Send</button>
+                                    <button type="submit" onSubmit={this.sendEmail}>Send</button>
                                     <button type="reset" id="reset-button">Reset</button>
                                 </p>
                             </div>
