@@ -29,7 +29,8 @@ class Contact extends Component  {
     generateStateOptions = () => {
        return stateAbbreviations.map(
             (stateObject) => {
-                return <option value={stateObject.abbreviation}> {stateObject.abbreviation} -- {stateObject.name} </option> 
+                return <option value={stateObject.abbreviation}
+                key={stateObject.abbreviation}> {stateObject.abbreviation} -- {stateObject.name} </option> 
             }
         );
     }; //end generateStateOptions
@@ -69,10 +70,7 @@ class Contact extends Component  {
     render = () => {
         return (
             <section className="contact-container container">
-                <form action="" 
-                      method="post" 
-                      onSubmit={this.sendEmail}
-                >
+                <form onSubmit={this.sendEmail} >
                     <fieldset>
                         <legend className="form-legend">Contact Us</legend>
                         <div className="qr-code-row row">
