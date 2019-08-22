@@ -14,7 +14,15 @@ class Contact extends Component  {
         super(props);
     
         this.state = {
-
+            clientName: "",
+            companyName: "",
+            email: "",
+            subject: "",
+            message: "",
+            address: "",
+            city: "",
+            state: "",
+            zipcode: ""
         };
     }
 
@@ -26,31 +34,45 @@ class Contact extends Component  {
         );
     }; //end generateStateOptions
 
-    sendEmail = (e) => {
-        e.preventDefault();
+    handleInputChange = (event) => {
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
+
+        this.setState({
+            [name] : value
+        });
+    }; //end handleInputChange
+
+    sendEmail = (event) => {
         console.log("Sending e-mail...");
         
-        let sender = "sales@harzatapes.com";
-        let from ="sales@harzatapes.com";
-        let subject = "New Client Message from HarzaTapes.com";
-        let body = `Hi`;
+        let to = "juandavid@jdlondono.com";
+        let from = this.state.email;
+        let subject = `New Client Message from HarzaTapes.com: ${this.state.subject}`;
+        let body = this.state.message;
 
         let sendEmail = new SmtpService();
         sendEmail.send({
             SecureToken : process.env.REACT_APP_SMTPJS_CRED,
-            To : sender,
+            To : to,
             From : from,
             Subject : subject,
             Body : body
         }).then(
           message => alert(message)
         );
+        console.log("Email sent");
+        event.preventDefault();
     };
 
     render = () => {
         return (
             <section className="contact-container container">
-                <form action="" method="post">
+                <form action="" 
+                      method="post" 
+                      onSubmit={this.sendEmail}
+                >
                     <fieldset>
                         <legend className="form-legend">Contact Us</legend>
                         <div className="qr-code-row row">
@@ -110,31 +132,60 @@ class Contact extends Component  {
                                     <label className="form-field-label">Your name: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
                                     </label>
-                                    <input className="form-field-input" type="text" />
+                                    <input className="form-field-input" 
+                                           type="text" 
+                                           id="clientName"
+                                           name="clientName"
+                                           onChange={this.handleInputChange}
+                                           value={this.state.clientName}
+                                    />
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">
                                         Company Name:
                                     </label>
-                                    <input className="form-field-input" type="text" />
+                                    <input className="form-field-input" 
+                                           type="text" 
+                                           id="companyName"
+                                           name="companyName"
+                                           onChange={this.handleInputChange}
+                                           value={this.state.companyName}
+                                    />
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">E-mail: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
                                     </label>
-                                    <input className="form-field-input" type="email" />
+                                    <input className="form-field-input" 
+                                           type="email" 
+                                           id="email"
+                                           name="email"
+                                           onChange={this.handleInputChange}
+                                           value={this.state.email}
+                                    />
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">Subject: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
                                     </label>
-                                    <input className="form-field-input" type="text" />
+                                    <input className="form-field-input" 
+                                           type="text" 
+                                           id="subject"
+                                           name="subject"
+                                           onChange={this.handleInputChange}
+                                           value={this.state.subject}
+                                    />
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">Message: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
                                     </label>
-                                    <textarea rows="5" cols="45"></textarea>
+                                    <textarea rows="5" cols="45"
+                                                id="message"
+                                                name="message"
+                                                onChange={this.handleInputChange}
+                                                value={this.state.message}
+                                    />
                                 </p>
                             </div>
                             <div className="col-md-6">
@@ -148,19 +199,33 @@ class Contact extends Component  {
                                     <label className="form-field-label">
                                         Address: 
                                     </label>
-                                    <input className="form-field-input" type="text" />                        
+                                    <input className="form-field-input" 
+                                           type="text" 
+                                           id="address"
+                                           name="address"
+                                           value={this.state.address}
+                                           onChange={this.handleInputChange}
+                                    />                        
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">
                                         City: 
                                     </label>
-                                    <input className="form-field-input" type="text" />                        
+                                    <input className="form-field-input" 
+                                           type="text" 
+                                           id="city"
+                                           name="city"
+                                           value={this.state.city}
+                                           onChange={this.handleInputChange}
+                                    />                        
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">
                                         State: 
                                     </label>
-                                    <select>
+                                    <select value={this.state.state}
+                                            onChange={this.handleInputChange}
+                                    > 
                                         { this.generateStateOptions() }
                                     </select>                       
                                 </p>
@@ -168,10 +233,15 @@ class Contact extends Component  {
                                     <label className="form-field-label">
                                         ZipCode: 
                                     </label>
-                                    <input className="form-field-input" type="number" />                        
+                                    <input  className="form-field-input" 
+                                            type="number" 
+                                            id="zipcode"
+                                            name="zipcode"
+                                            value={this.state.zipcode}
+                                            onChange={this.handleInputChange}/>                        
                                 </p>
                                 <p className="form-field">
-                                    <button type="submit" onSubmit={(event) => { this.sendEmail(event); } }>Send</button>
+                                    <button type="submit">Send</button>
                                     <button type="reset" id="reset-button">Reset</button>
                                 </p>
                             </div>
