@@ -187,7 +187,7 @@ class Contact extends Component  {
                                 </p>
                             </div>
                             <div className="col-md-6">
-                                <p className="form-field">
+                                <div className="form-field">
                                     <p className="form-field-message">
                                         Include only if...you wish to receive
                                         by<br/> mail one FREE roll of our Printed 
@@ -204,7 +204,7 @@ class Contact extends Component  {
                                            value={this.state.address}
                                            onChange={this.handleInputChange}
                                     />                        
-                                </p>
+                                </div>
                                 <p className="form-field">
                                     <label className="form-field-label">
                                         City: 
