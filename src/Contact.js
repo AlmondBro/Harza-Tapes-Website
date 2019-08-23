@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //Import SMTP.js code from a file
-import SmtpService from './SmtpService.js'; 
+import { SmtpService } from './SmtpService.js'; 
 
 //Import state abbreviations to generate in the form
 import stateAbbreviations from "./stateAbbreviations.js";
@@ -70,7 +70,7 @@ class Contact extends Component  {
     render = () => {
         return (
             <section className="contact-container container">
-                <form onSubmit={this.sendEmail} >
+                <form onSubmit={(e) => this.sendEmail(e) } >
                     <fieldset>
                         <legend className="form-legend">Contact Us</legend>
                         <div className="qr-code-row row">

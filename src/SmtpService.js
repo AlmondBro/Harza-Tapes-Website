@@ -1,3 +1,4 @@
+import React from 'react';
 /* SmtpJS.com - v3.0.0 */
 const SmtpService = () => {
     let Email = {
@@ -29,12 +30,12 @@ const SmtpService = () => {
             t.send();
         },
         createCORSRequest: function(e, n) {
-            var t = new XMLHttpRequest;
-            return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof window.XDomainRequest ? (t = new window.XDomainRequest).open(e, n) : t = null, t
+            var t = new XMLHttpRequest();
+            return "withCredentials" in t ? t.open(e, n, !0) : "undefined" != typeof window.XDomainRequest ? (t = new window.XDomainRequest() ).open(e, n) : t = null, t;
         }
     }; //end Email object
 
     return Email;
 };
 
-export default SmtpService;
+export { SmtpService };
