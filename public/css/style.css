@@ -1211,6 +1211,12 @@ p.form-field-message {
  font-style: italic;
 }
 
+.form-errorMessage {
+   color: red;
+   padding: 0.5em;
+   font-weight: 700;
+}
+
 /* === NOT FOUND === */
 .notFound-container {
     margin: 15px auto;
