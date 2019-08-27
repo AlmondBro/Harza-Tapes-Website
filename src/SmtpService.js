@@ -1,6 +1,6 @@
 import React from 'react';
 /* SmtpJS.com - v3.0.0 */
-const SmtpService = () => {
+const SmtpService = (props) => {
     let Email = {
         send: function(a) {
             return new Promise(function(n, e) {
@@ -38,4 +38,4 @@ const SmtpService = () => {
     return Email;
 };
 
-export { SmtpService };
+export default SmtpService ;

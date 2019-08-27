@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 //Import SMTP.js code from a file
-import { SmtpService } from './SmtpService.js'; 
+import SmtpService from './SmtpService.js'; 
 
 //Import state abbreviations to generate in the form
 import stateAbbreviations from "./stateAbbreviations.js";
@@ -21,10 +21,16 @@ class Contact extends Component  {
             message: "",
             address: "",
             city: "",
-            state: "",
-            zipcode: ""
+            stateUSA: "",
+            zipcode: "",
+            renderMessage: false,
+            firstTimeRender: null
         };
     }
+
+    componentDidMount = () => {
+        this.setState({firstTimeRender: true});
+    };
 
     generateStateOptions = () => {
        return stateAbbreviations.map(
@@ -45,32 +51,61 @@ class Contact extends Component  {
         });
     }; //end handleInputChange
 
+    handleChange = (event) => {
+        this.setState({stateUSA: event.target.value});
+      }
+
     sendEmail = (event) => {
-        console.log("Sending e-mail...");
-        
+        console.log("Sending e-mail...");        
         let to = "juandavid@jdlondono.com";
         let from = this.state.email;
         let subject = `New Client Message from HarzaTapes.com: ${this.state.subject}`;
+        let message = `Name of Sender:\t ${this.state.clientName} ${"\n"}
+                       Address:\t ${this.state.address} \n${"\n"}
+                       City: \t ${this.state.city} \n${"\n"}
+                       State: \t ${this.state.stateUSA} \n${"\n"}
+                       Company:\t ${this.state.companyName} \n${"\n"}
+                       E-mail:\t ${from} \n${"\n"}
+                       Message: \t ${this.state.message}
+                       `  
         let body = this.state.message;
 
-        let sendEmail = new SmtpService();
+        let sendEmail = SmtpService();
         sendEmail.send({
             SecureToken : process.env.REACT_APP_SMTPJS_CRED,
             To : to,
             From : from,
             Subject : subject,
-            Body : body
+            Body : message
         }).then(
-          message => alert(message)
+          message => console.log(message)
         );
         console.log("Email sent");
-        event.preventDefault();
     };
+
+    formValidate = (event) => {
+        event.preventDefault();
+        this.setState({ firstTimeRender : false });
+        if (this.state.clientName && this.state.email &&
+            this.state.subject && this.state.subject
+            ) {
+                this.setState({
+                    renderMessage : false
+                });
+                console.log("True to sendEmail");
+                this.sendEmail(event);
+        } else {
+            this.setState({
+                renderMessage : true
+            });
+            console.log("Could not validate");
+        }
+    }; //end formValidate()
 
     render = () => {
         return (
             <section className="contact-container container">
-                <form onSubmit={(e) => this.sendEmail(e) } >
+                <form onSubmit={(e) => this.formValidate(e) } method="POST" >
                     <fieldset>
                         <legend className="form-legend">Contact Us</legend>
                         <div className="qr-code-row row">
@@ -121,7 +156,7 @@ class Contact extends Component  {
                                 </figure>
                             </div>
                             <div className="col-md-3">
-                                <img src="./assets/img/deal.png" id="deal-image" className="img-fluid" />
+                                <img src="./assets/img/deal.png" alt="Deal" id="deal-image" className="img-fluid" />
                             </div>
                         </div>
                         <div className="contactContainerForm-row row">
@@ -137,6 +172,11 @@ class Contact extends Component  {
                                            onChange={this.handleInputChange}
                                            value={this.state.clientName}
                                     />
+                                    <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
+                                                                           ( ( this.state.clientName && !this.state.renderMessage ) ? 
+                                                                                " " : "Please input your name"
+                                                                           ) : "" }
+                                    </div>
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">
@@ -161,6 +201,11 @@ class Contact extends Component  {
                                            onChange={this.handleInputChange}
                                            value={this.state.email}
                                     />
+                                    <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
+                                                                           ( ( this.state.email && !this.state.renderMessage ) ? 
+                                                                                " " : "Please input your email"
+                                                                           ) : "" }
+                                    </div>
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">Subject: 
@@ -173,6 +218,11 @@ class Contact extends Component  {
                                            onChange={this.handleInputChange}
                                            value={this.state.subject}
                                     />
+                                      <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
+                                                                           ( ( this.state.subject && !this.state.renderMessage ) ? 
+                                                                                " " : "Please input your subject"
+                                                                           ) : "" }
+                                    </div>
                                 </p>
                                 <p className="form-field">
                                     <label className="form-field-label">Message: 
@@ -184,6 +234,11 @@ class Contact extends Component  {
                                                 onChange={this.handleInputChange}
                                                 value={this.state.message}
                                     />
+                                   <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
+                                                                           ( ( this.state.message && !this.state.renderMessage ) ? 
+                                                                                " " : "Please input your name"
+                                                                           ) : "" }
+                                    </div>
                                 </p>
                             </div>
                             <div className="col-md-6">
@@ -221,8 +276,8 @@ class Contact extends Component  {
                                     <label className="form-field-label">
                                         State: 
                                     </label>
-                                    <select value={this.state.state}
-                                            onChange={this.handleInputChange}
+                                    <select value={this.state.stateUSA}
+                                            onChange={this.handleChange}
                                     > 
                                         { this.generateStateOptions() }
                                     </select>                       

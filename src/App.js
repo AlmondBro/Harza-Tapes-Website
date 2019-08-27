@@ -1,5 +1,5 @@
 import React from 'react';
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 
 import { Route, BrowserRouter, Redirect } from 'react-router-dom';
 import { AnimatedSwitch as Switch } from 'react-router-transition';
@@ -22,6 +22,7 @@ import FontAwesome from 'react-fontawesome';
 import { NavLink as Link } from "react-router-dom";
 
 const App = () => {
+  const dotenv = require('dotenv');
   dotenv.config();
   
   if (dotenv.error) {
