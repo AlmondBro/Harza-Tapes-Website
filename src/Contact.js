@@ -9,6 +9,9 @@ import stateAbbreviations from "./stateAbbreviations.js";
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
 
+//TODO: ADD TELEPHONE FIELD
+//TODO: REQUIRED LABEL
+
 class Contact extends Component  {
     constructor(props) {
         super(props);
@@ -24,7 +27,8 @@ class Contact extends Component  {
             stateUSA: "",
             zipcode: "",
             renderMessage: false,
-            firstTimeRender: null
+            firstTimeRender: null,
+            emailSentSuccess: false
         };
     }
 
@@ -36,7 +40,7 @@ class Contact extends Component  {
        return stateAbbreviations.map(
             (stateObject) => {
                 return <option value={stateObject.abbreviation}
-                key={stateObject.abbreviation}> {stateObject.abbreviation} -- {stateObject.name} </option> 
+       key={stateObject.abbreviation}> {stateObject.name} ( {stateObject.abbreviation} ) </option> 
             }
         );
     }; //end generateStateOptions
@@ -81,6 +85,9 @@ class Contact extends Component  {
           message => console.log(message)
         );
         console.log("Email sent");
+        this.setState({
+            emailSentSuccess: true 
+        });
     };
 
     formValidate = (event) => {
@@ -112,7 +119,9 @@ class Contact extends Component  {
             address: "",
             city: "",
             stateUSA: "",
-            zipcode: ""
+            zipcode: "",
+            emailSent: false,
+            firstTimeRender: true
         });
     };
 
@@ -175,6 +184,10 @@ class Contact extends Component  {
                         </div>
                         <div className="contactContainerForm-row row">
                             <div className="col-md-6">
+                                <p id="requiredText">
+                                    Required<abbr title="required" className="form-asterisk">*</abbr>
+                                </p>
+
                                 <p className="form-field">
                                     <label className="form-field-label">Your name: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
@@ -311,6 +324,18 @@ class Contact extends Component  {
                                     <button type="submit">Send</button>
                                     <button type="reset" id="reset-button" onClick={this.resetForm}>Reset</button>
                                 </p>
+                                <div>
+                                    <p id={ !this.state.firstTimeRender ? 
+                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
+                                                ? "form-successMessage" 
+                                                            : "form-errorMessage") 
+                                            : ""}
+                                    > { !this.state.firstTimeRender ? 
+                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
+                                                ? "E-mail sent successfuly \&#10004;" : "Sending e-mail failed \&#215;" ) 
+                                        : ""}
+                                    </p>
+                                </div>
                             </div>
                         </div>
  
