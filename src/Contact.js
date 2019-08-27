@@ -102,6 +102,20 @@ class Contact extends Component  {
         }
     }; //end formValidate()
 
+    resetForm = () => {
+        this.setState({
+            clientName: "",
+            companyName: "",
+            email: "",
+            subject: "",
+            message: "",
+            address: "",
+            city: "",
+            stateUSA: "",
+            zipcode: ""
+        });
+    };
+
     render = () => {
         return (
             <section className="contact-container container">
@@ -295,7 +309,7 @@ class Contact extends Component  {
                                 </p>
                                 <p className="form-field">
                                     <button type="submit">Send</button>
-                                    <button type="reset" id="reset-button">Reset</button>
+                                    <button type="reset" id="reset-button" onClick={this.resetForm}>Reset</button>
                                 </p>
                             </div>
                         </div>
