@@ -65,14 +65,14 @@ class Contact extends Component  {
         let to = "juandavid@jdlondono.com";
         let from = this.state.email;
         let subject = `New Client Message from HarzaTapes.com: ${this.state.subject}`;
-        let message = `Name of Sender:\t ${this.state.clientName} ${"\n"}
-                       Address:\t ${this.state.address} \n${"\n"}
-                       City: \t ${this.state.city} \n${"\n"}
-                       State: \t ${this.state.stateUSA} \n${"\n"}
-                       Company:\t ${this.state.companyName} \n${"\n"}
-                       E-mail:\t ${from} \n${"\n"}
-                       Phone:\t ${this.state.phone} \n
-                       Message: \t ${this.state.message}
+        let message = `<strong>Name of Client (Sender)<strong>:\t ${this.state.clientName} ${"\n"} <br/>
+                       <strong>Address</strong>:\t ${this.state.address} \n${"\n"} <br/>
+                       <strong>City</strong>: \t ${this.state.city} \n${"\n"} <br/>
+                       <strong>State</strong>: \t ${this.state.stateUSA} \n${"\n"} <br/>
+                       <strong>Company</strong>:\t ${this.state.companyName} \n${"\n"} <br/>
+                       <strong>E-mail</strong>:\t ${from} \n${"\n"} <br/>
+                       <strong>Phone</strong>:\t ${this.state.phone} \n <br/>
+                       <strong>Message</strong>: \t ${this.state.message} <br/>
                        `  
         let body = this.state.message;
 
