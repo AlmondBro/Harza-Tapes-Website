@@ -21,6 +21,7 @@ class Contact extends Component  {
             companyName: "",
             email: "",
             subject: "",
+            phone: "",
             message: "",
             address: "",
             city: "",
@@ -70,6 +71,7 @@ class Contact extends Component  {
                        State: \t ${this.state.stateUSA} \n${"\n"}
                        Company:\t ${this.state.companyName} \n${"\n"}
                        E-mail:\t ${from} \n${"\n"}
+                       Phone:\t ${this.state.phone} \n
                        Message: \t ${this.state.message}
                        `  
         let body = this.state.message;
@@ -115,6 +117,7 @@ class Contact extends Component  {
             companyName: "",
             email: "",
             subject: "",
+            phone: "",
             message: "",
             address: "",
             city: "",
@@ -218,6 +221,23 @@ class Contact extends Component  {
                                     />
                                 </p>
                                 <p className="form-field">
+                                    <label className="form-field-label">Phone Number: 
+                                        <abbr title="required" className="form-asterisk">*</abbr>
+                                    </label>
+                                    <input className="form-field-input" 
+                                           type="number" 
+                                           id="phone"
+                                           name="phone"
+                                           onChange={this.handleInputChange}
+                                           value={this.state.phone}
+                                    />
+                                    <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
+                                                                           ( ( this.state.phone && !this.state.renderMessage ) ? 
+                                                                                " " : "Please input your phone number."
+                                                                           ) : "" }
+                                    </div>
+                                </p>
+                                <p className="form-field">
                                     <label className="form-field-label">E-mail: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
                                     </label>
@@ -230,7 +250,7 @@ class Contact extends Component  {
                                     />
                                     <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.email && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your email"
+                                                                                " " : "Please input your message"
                                                                            ) : "" }
                                     </div>
                                 </p>
