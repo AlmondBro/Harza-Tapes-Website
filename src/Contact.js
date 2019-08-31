@@ -204,7 +204,7 @@ class Contact extends Component  {
                                     />
                                     <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.clientName && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your name"
+                                                                                " " : "Please input your name."
                                                                            ) : "" }
                                     </div>
                                 </p>
@@ -250,7 +250,7 @@ class Contact extends Component  {
                                     />
                                     <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.email && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your message"
+                                                                                " " : "Please input your e-mail."
                                                                            ) : "" }
                                     </div>
                                 </p>
@@ -267,7 +267,7 @@ class Contact extends Component  {
                                     />
                                       <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.subject && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your subject"
+                                                                                " " : "Please input your subject."
                                                                            ) : "" }
                                     </div>
                                 </p>
@@ -283,7 +283,7 @@ class Contact extends Component  {
                                     />
                                    <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.message && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your name"
+                                                                                " " : "Please input your message."
                                                                            ) : "" }
                                     </div>
                                 </p>
