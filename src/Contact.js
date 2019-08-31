@@ -352,7 +352,7 @@ class Contact extends Component  {
                                             : ""}
                                     > { !this.state.firstTimeRender ? 
                                             (this.state.emailSentSuccess && !this.state.firstTimeRender 
-                                                ? "E-mail sent successfuly \&#10004;" : "Sending e-mail failed \&#215;" ) 
+                                                ? `E-mail sent successfuly ${String.fromCharCode(10004)}` : `Sending e-mail failed ${String.fromCharCode(215)}` ) 
                                         : ""}
                                     </p>
                                 </div>
