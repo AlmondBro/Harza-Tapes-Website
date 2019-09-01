@@ -22,8 +22,16 @@ const Navigation = (props) => {
                         <img src="/assets/img/harza-tapes-logo.svg" 
                              alt="Harza Tapes" 
                              title="Home"
+                             id="harza-logo-mobile"
                         />
                     </Link>
+                    <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
+                            <img className="animated bounceInDown header-image"
+                                    id="second-logo"
+                                    src="/assets/img/cintandina-logo.svg"
+                                    alt="Cintandina" 
+                                    id="cintandina-logo-mobile"/>
+                    </a>
                 </Navbar.Brand>
                 {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
                 <NavbarToggle aria-controls="basic-navbar-nav" />
