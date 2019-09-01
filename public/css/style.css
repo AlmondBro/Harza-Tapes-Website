@@ -543,7 +543,10 @@ background: transparent !important;
 }
 
 #cintandina-logo-mobile {
-    max-width: 40px;
+	max-width: 40px;
+	background-color: #B3E2EE;
+	border-radius: 2px;
+	padding: 2px;
 }
 
 
