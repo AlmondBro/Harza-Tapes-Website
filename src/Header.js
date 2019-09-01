@@ -4,6 +4,7 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import { NavLink as Link } from 'react-router-dom';
 
+//TODO: ADD CINTANDINA LOGO IN MOBILE HEADER
 
 const Header = (props) => {
     return (

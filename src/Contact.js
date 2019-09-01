@@ -9,6 +9,9 @@ import stateAbbreviations from "./stateAbbreviations.js";
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
 
+//TODO: ADD TELEPHONE FIELD
+//TODO: REQUIRED LABEL
+
 class Contact extends Component  {
     constructor(props) {
         super(props);
@@ -18,13 +21,15 @@ class Contact extends Component  {
             companyName: "",
             email: "",
             subject: "",
+            phone: "",
             message: "",
             address: "",
             city: "",
             stateUSA: "",
             zipcode: "",
             renderMessage: false,
-            firstTimeRender: null
+            firstTimeRender: null,
+            emailSentSuccess: false
         };
     }
 
@@ -36,7 +41,7 @@ class Contact extends Component  {
        return stateAbbreviations.map(
             (stateObject) => {
                 return <option value={stateObject.abbreviation}
-                key={stateObject.abbreviation}> {stateObject.abbreviation} -- {stateObject.name} </option> 
+       key={stateObject.abbreviation}> {stateObject.name} ( {stateObject.abbreviation} ) </option> 
             }
         );
     }; //end generateStateOptions
@@ -60,13 +65,14 @@ class Contact extends Component  {
         let to = "juandavid@jdlondono.com";
         let from = this.state.email;
         let subject = `New Client Message from HarzaTapes.com: ${this.state.subject}`;
-        let message = `Name of Sender:\t ${this.state.clientName} ${"\n"}
-                       Address:\t ${this.state.address} \n${"\n"}
-                       City: \t ${this.state.city} \n${"\n"}
-                       State: \t ${this.state.stateUSA} \n${"\n"}
-                       Company:\t ${this.state.companyName} \n${"\n"}
-                       E-mail:\t ${from} \n${"\n"}
-                       Message: \t ${this.state.message}
+        let message = `<strong>Name of Client (Sender)<strong>:\t ${this.state.clientName} ${"\n"} <br/>
+                       <strong>Address</strong>:\t ${this.state.address} \n${"\n"} <br/>
+                       <strong>City</strong>: \t ${this.state.city} \n${"\n"} <br/>
+                       <strong>State</strong>: \t ${this.state.stateUSA} \n${"\n"} <br/>
+                       <strong>Company</strong>:\t ${this.state.companyName} \n${"\n"} <br/>
+                       <strong>E-mail</strong>:\t ${from} \n${"\n"} <br/>
+                       <strong>Phone</strong>:\t ${this.state.phone} \n <br/>
+                       <strong>Message</strong>: \t ${this.state.message} <br/>
                        `  
         let body = this.state.message;
 
@@ -81,6 +87,9 @@ class Contact extends Component  {
           message => console.log(message)
         );
         console.log("Email sent");
+        this.setState({
+            emailSentSuccess: true 
+        });
     };
 
     formValidate = (event) => {
@@ -101,6 +110,23 @@ class Contact extends Component  {
             console.log("Could not validate");
         }
     }; //end formValidate()
+
+    resetForm = () => {
+        this.setState({
+            clientName: "",
+            companyName: "",
+            email: "",
+            subject: "",
+            phone: "",
+            message: "",
+            address: "",
+            city: "",
+            stateUSA: "",
+            zipcode: "",
+            emailSent: false,
+            firstTimeRender: true
+        });
+    };
 
     render = () => {
         return (
@@ -161,6 +187,10 @@ class Contact extends Component  {
                         </div>
                         <div className="contactContainerForm-row row">
                             <div className="col-md-6">
+                                <p id="requiredText">
+                                    Required<abbr title="required" className="form-asterisk">*</abbr>
+                                </p>
+
                                 <p className="form-field">
                                     <label className="form-field-label">Your name: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
@@ -174,7 +204,7 @@ class Contact extends Component  {
                                     />
                                     <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.clientName && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your name"
+                                                                                " " : "Please input your name."
                                                                            ) : "" }
                                     </div>
                                 </p>
@@ -191,6 +221,23 @@ class Contact extends Component  {
                                     />
                                 </p>
                                 <p className="form-field">
+                                    <label className="form-field-label">Phone Number: 
+                                        <abbr title="required" className="form-asterisk">*</abbr>
+                                    </label>
+                                    <input className="form-field-input" 
+                                           type="number" 
+                                           id="phone"
+                                           name="phone"
+                                           onChange={this.handleInputChange}
+                                           value={this.state.phone}
+                                    />
+                                    <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
+                                                                           ( ( this.state.phone && !this.state.renderMessage ) ? 
+                                                                                " " : "Please input your phone number."
+                                                                           ) : "" }
+                                    </div>
+                                </p>
+                                <p className="form-field">
                                     <label className="form-field-label">E-mail: 
                                         <abbr title="required" className="form-asterisk">*</abbr>
                                     </label>
@@ -203,7 +250,7 @@ class Contact extends Component  {
                                     />
                                     <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.email && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your email"
+                                                                                " " : "Please input your e-mail."
                                                                            ) : "" }
                                     </div>
                                 </p>
@@ -220,7 +267,7 @@ class Contact extends Component  {
                                     />
                                       <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.subject && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your subject"
+                                                                                " " : "Please input your subject."
                                                                            ) : "" }
                                     </div>
                                 </p>
@@ -236,7 +283,7 @@ class Contact extends Component  {
                                     />
                                    <div className="form-errorMessage">{ (this.state.firstTimeRender === false) ? 
                                                                            ( ( this.state.message && !this.state.renderMessage ) ? 
-                                                                                " " : "Please input your name"
+                                                                                " " : "Please input your message."
                                                                            ) : "" }
                                     </div>
                                 </p>
@@ -295,8 +342,20 @@ class Contact extends Component  {
                                 </p>
                                 <p className="form-field">
                                     <button type="submit">Send</button>
-                                    <button type="reset" id="reset-button">Reset</button>
+                                    <button type="reset" id="reset-button" onClick={this.resetForm}>Reset</button>
                                 </p>
+                                <div>
+                                    <p id={ !this.state.firstTimeRender ? 
+                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
+                                                ? "form-successMessage" 
+                                                            : "form-errorMessage") 
+                                            : ""}
+                                    > { !this.state.firstTimeRender ? 
+                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
+                                                ? `E-mail sent successfuly ${String.fromCharCode(10004)}` : `Sending e-mail failed ${String.fromCharCode(215)}` ) 
+                                        : ""}
+                                    </p>
+                                </div>
                             </div>
                         </div>
  
