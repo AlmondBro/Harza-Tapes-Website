@@ -322,11 +322,11 @@ header.header {
 }
 
 .header-logo-container {
- width: 600px;
- position: relative;
- margin: 0 auto;
- text-align: center;
- max-width: 100%;
+    width: 620px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
 }
 
 .header-image {
@@ -533,6 +533,15 @@ background: transparent !important;
     max-width: 150px;
     margin-right: 15px;
 }
+
+#second-logo {
+    /* position: relative;
+    top: 10px; */
+    max-height: 45px; /* 70px was good*/
+    /* background-color: white; */
+    margin-left: 10px;
+    max-width: 100px;
+   }
 
 #cintandina-logo-mobile {
 	max-width: 40px;

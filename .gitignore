@@ -17,6 +17,9 @@ package-lock.json
 #Environmental variables
 *.env
 
+#Backup
+Harza-Tapes-Backup/
+
 # misc
 .DS_Store
 .env.local
