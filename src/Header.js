@@ -17,7 +17,7 @@ const Header = (props) => {
                                     src="/assets/img/harza-tapes-logo.svg"
                                     alt="Harza Tapes" />
                         </Link>
-                        <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
+                        <a href="https://www.cintandina.com/en/index_en.html" target="_blank" rel="noopener noreferrer">
                             <img className="animated bounceInDown header-image"
                                     id="second-logo"
                                     src="/assets/img/cintandina-logo.svg"

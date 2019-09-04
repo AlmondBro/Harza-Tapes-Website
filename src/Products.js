@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, Switch, BrowserRouter, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 // import { AnimatedSwitch as Switch } from 'react-router-transition';
 
 import { NavLink as Link } from "react-router-dom";
@@ -9,7 +9,7 @@ const FourSquareProductsPane = (props) => {
     return (
         <main className="col-md-8 margin-center">
             <section className="productsRow row no-gutters">
-                <diuv className="productsContainer col-sm-5">
+                <div className="productsContainer col-sm-5">
                     <img src="/assets/img/custom-printed-tape.jpg" 
                         alt="Custom Printed Tape" 
                         className="img-fluid flex-img-center" 
@@ -19,7 +19,7 @@ const FourSquareProductsPane = (props) => {
                         <li>White, Clear, or Tan Polypropylene Tape</li>
                         <li>No Artwork Charge</li>
                     </ul>
-                </diuv>
+                </div>
                 <div className="productsContainer col-sm-5">
                     <img src="/assets/img/stock-printed-tape.jpg" 
                         alt="Stock Printed Tape" 

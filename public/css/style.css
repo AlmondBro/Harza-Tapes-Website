@@ -329,14 +329,6 @@ header.header {
  max-width: 100%;
 }
 
-#second-logo {
- /* position: relative;
- top: 10px; */
- max-height: 45px; /* 70px was good*/
- /* background-color: white; */
- margin-left: 10px;
-}
-
 .header-image {
  max-width: 300px;
  margin: 0 auto;
@@ -536,6 +528,22 @@ background: transparent !important;
      font-size: 0.6em;
  }  
 } */
+
+#harza-logo-mobile {
+    max-width: 150px;
+    margin-right: 15px;
+}
+
+#cintandina-logo-mobile {
+	max-width: 40px;
+	background-color: #B3E2EE;
+	border-radius: 2px;
+    padding: 2px;
+    
+    max-height: 45px; /* 70px was good*/
+    margin-left: 10px;
+}
+
 
 /* === HOME === */
 .home-slideshow {

@@ -46,7 +46,8 @@ const Home = (props) => {
                 <div className="col-md">
                     <a className="no-cursor" target="_blank">
                         <img src="./assets/img/2019-PMA-SUMMIT.jpg"
-                            className="img-fluid" />
+                            className="img-fluid"
+                            alt="2019 PMA Summit" />
                     </a>
                 </div>
             </div>
