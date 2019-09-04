@@ -19,7 +19,6 @@ import NotFound404 from "./NotFound404.js";
 
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
-import { NavLink as Link } from "react-router-dom";
 
 const App = () => {
   const dotenv = require('dotenv');

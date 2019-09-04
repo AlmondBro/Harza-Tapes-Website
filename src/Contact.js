@@ -73,9 +73,7 @@ class Contact extends Component  {
                        <strong>E-mail</strong>:\t ${from} \n${"\n"} <br/>
                        <strong>Phone</strong>:\t ${this.state.phone} \n <br/>
                        <strong>Message</strong>: \t ${this.state.message} <br/>
-                       `  
-        let body = this.state.message;
-
+                       `
         let sendEmail = SmtpService();
         sendEmail.send({
             SecureToken : process.env.REACT_APP_SMTPJS_CRED,
@@ -153,6 +151,7 @@ class Contact extends Component  {
                                         /> 
                                         <a 
                                             target="_blank"
+                                            rel="noopener noreferrer"
                                             href="https://www.google.com/maps/place/Harza+Tapes/@33.966971,-118.0669307,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2d3b53a9cf309:0x3a23927fc824b33f!8m2!3d33.966971!4d-118.064742">
                                             8237 Allport Ave
                                             Santa Fe Springs,

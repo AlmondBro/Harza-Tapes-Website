@@ -2,13 +2,10 @@ import React from "react";
 
 //Import 3rd-party packages
 import { NavLink as Link } from "react-router-dom";
-import FontAwesome from 'react-fontawesome';
 
 //Import 3rd-party packages
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
 
 import NavbarToggle from "./NavbarToggle.js";
 
@@ -25,9 +22,8 @@ const Navigation = (props) => {
                              id="harza-logo-mobile"
                         />
                     </Link>
-                    <a href="https://www.cintandina.com/en/index_en.html" target="_blank">
+                    <a href="https://www.cintandina.com/en/index_en.html" target="_blank" rel="noopener noreferrer">
                             <img className="animated bounceInDown header-image"
-                                    id="second-logo"
                                     src="/assets/img/cintandina-logo.svg"
                                     alt="Cintandina" 
                                     id="cintandina-logo-mobile"/>

@@ -1,4 +1,3 @@
-import React from 'react';
 /* SmtpJS.com - v3.0.0 */
 const SmtpService = (props) => {
     let Email = {
