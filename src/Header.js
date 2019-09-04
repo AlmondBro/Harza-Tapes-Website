@@ -4,14 +4,13 @@ import React from 'react';
 import FontAwesome from 'react-fontawesome';
 import { NavLink as Link } from 'react-router-dom';
 
-//TODO: ADD CINTANDINA LOGO IN MOBILE HEADER
-
 const Header = (props) => {
+    let isSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);
     return (
         <section className="header-section">
             <header className="header">
                 <div className ="headerImage-quote-container">
-                    <div className="header-logo-container">
+                    <div className={!isSafari ? "header-logo-container" : "header-logo-container-safari"}>
                         <Link to="/home">
                             <img className="animated bounceInDown header-image"
                                     src="/assets/img/harza-tapes-logo.svg"

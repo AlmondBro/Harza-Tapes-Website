@@ -329,6 +329,16 @@ header.header {
     max-width: 100%;
 }
 
+.header-logo-container-safari {
+    width: 620px;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+    margin-top: 50px;
+}
+
+
 .header-image {
  max-width: 300px;
  margin: 0 auto;
