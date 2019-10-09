@@ -10,7 +10,7 @@ import stateAbbreviations from "./stateAbbreviations.js";
 import FontAwesome from 'react-fontawesome';
 
 //Detect if in one is in development
-let isDev = (!process.env.NODE_ENV || process.env.NODE_ENV === 'development');
+let isDev = (process.env.NODE_ENV == 'development' || !process.env.NODE_ENV );
 class Contact extends Component  {
     constructor(props) {
         super(props);

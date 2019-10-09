@@ -81,7 +81,7 @@ const Footer = (props) => {
                         <FontAwesome name="paint-brush" 
                                     className="footer-contact-icon"
                         /> Designed by Harza Tapes 
-                        <span> (Last Update &mdash; September 2019)</span>
+                        <span> (Last Update &mdash; October 2019)</span>
                     </p>
                 </div>
             </section>
