@@ -291,7 +291,7 @@ class Contact extends Component  {
                                     <p className="form-field-message">
                                         Include only if...you wish to receive
                                         by<br/> mail one FREE roll of our Printed 
-                                        Sealing <br/> Tape and one 2019 Calendar
+                                        Sealing <br/> Tape and one 2020 Calendar
                                         Magnet <br/>(while supplies last)
                                     </p>
                                     <label className="form-field-label">

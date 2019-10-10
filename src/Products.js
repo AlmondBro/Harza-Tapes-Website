@@ -145,6 +145,7 @@ const ProductsSidebar = (props) => {
                                     <li><a href="#" className="no-underline no-cursor">Flat Back Paper</a></li>
                                 </ul>
                             </li>
+                            <li><Link to={`${match.path}/dispensers`}>Food Grade Tapes</Link></li>
                             <li><Link to={`${match.path}/dispensers`}>Dispensers</Link>
                                 <ul>
                                     <li><a href="#" className="no-underline no-cursor">Multi-roll</a></li>

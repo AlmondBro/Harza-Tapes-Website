@@ -72,7 +72,7 @@ const Location = (props) => {
                         <a href="mailto:export@cintandina.com">
                             <FontAwesome name='envelope' 
                                         className="quote-phone-icon" 
-                            />export@cintandina.com
+                            />comercial@cintandina.com
                         </a>
                     </p>
                     <p>
