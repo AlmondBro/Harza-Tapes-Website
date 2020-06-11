@@ -21,13 +21,6 @@ import NotFound404 from "./NotFound404.js";
 import FontAwesome from 'react-fontawesome';
 
 const App = () => {
-  const dotenv = require('dotenv');
-  dotenv.config();
-  
-  if (dotenv.error) {
-    console.log("Dotenv error:\t" + dotenv.error);
-  }
-
   return (
     <BrowserRouter>
       <div>

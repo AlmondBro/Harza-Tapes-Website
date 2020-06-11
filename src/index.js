@@ -1,8 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+if (dotenv.error) {
+  console.log("Dotenv error:\t" + dotenv.error);
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

@@ -5,6 +5,8 @@ import { Route, Switch } from 'react-router-dom';
 
 import { NavLink as Link } from "react-router-dom";
 
+//TODO: Have a Food Grade Tapes open the home modal
+
 const FourSquareProductsPane = (props) => {
     return (
         <main className="col-md-8 margin-center">
@@ -93,7 +95,7 @@ const CartonSealingTapes = ({ match }) => {
                 </div>
                 <div className="productsContainer col-sm-5">
                     <img src="/assets/img/prd-flat-back.jpg" 
-                        alt="Flst Back Paper" 
+                        alt="Flat Back Paper" 
                         className="img-fluid flex-img-center" 
                     />
                     <h4 className="sideProducts">Flat Back Paper</h4>
@@ -145,6 +147,7 @@ const ProductsSidebar = (props) => {
                                     <li><a href="#" className="no-underline no-cursor">Flat Back Paper</a></li>
                                 </ul>
                             </li>
+                            {/* <li><Link to={`${match.path}/dispensers`}>Food Grade Tapes</Link></li> */}
                             <li><Link to={`${match.path}/dispensers`}>Dispensers</Link>
                                 <ul>
                                     <li><a href="#" className="no-underline no-cursor">Multi-roll</a></li>

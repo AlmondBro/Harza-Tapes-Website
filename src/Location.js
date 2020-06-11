@@ -44,8 +44,8 @@ const Location = (props) => {
                     <p>
                         <a href="https://www.google.com/maps/place/Cintandina/@3.4638006,-76.5141663,17.88z/data=!4m13!1m7!3m6!1s0x8e30a637dcadbb65:0xc3c20d01d9eb77b8!2sCra.+2+%2337-50,+Cali,+Valle+del+Cauca,+Colombia!3b1!8m2!3d3.463671!4d-76.5121491!3m4!1s0x8e30a637c52acdfb:0x5d3ec425454daa18!8m2!3d3.4637606!4d-76.5119377" 
                             target="_blank"
-                            className="locationLink"
                             rel="noopener noreferrer"
+                            className="locationLink"
                         >
                             <FontAwesome name='map' 
                                         className="quote-phone-icon" 
@@ -72,7 +72,7 @@ const Location = (props) => {
                         <a href="mailto:export@cintandina.com">
                             <FontAwesome name='envelope' 
                                         className="quote-phone-icon" 
-                            />export@cintandina.com
+                            />comercial@cintandina.com
                         </a>
                     </p>
                     <p>

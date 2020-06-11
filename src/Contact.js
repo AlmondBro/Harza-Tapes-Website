@@ -9,9 +9,8 @@ import stateAbbreviations from "./stateAbbreviations.js";
 //Import 3rd-party packages
 import FontAwesome from 'react-fontawesome';
 
-//TODO: ADD TELEPHONE FIELD
-//TODO: REQUIRED LABEL
-
+//Detect if in one is in development
+let isDev = (process.env.NODE_ENV == 'development' || !process.env.NODE_ENV );
 class Contact extends Component  {
     constructor(props) {
         super(props);
@@ -62,7 +61,7 @@ class Contact extends Component  {
 
     sendEmail = (event) => {
         console.log("Sending e-mail...");        
-        let to = "juandavid@jdlondono.com";
+        let to = isDev ? "juandavid@jdlondono.com" : "sales@harzatapes.com";
         let from = this.state.email;
         let subject = `New Client Message from HarzaTapes.com: ${this.state.subject}`;
         let message = `<strong>Name of Client (Sender)<strong>:\t ${this.state.clientName} ${"\n"} <br/>
@@ -292,7 +291,7 @@ class Contact extends Component  {
                                     <p className="form-field-message">
                                         Include only if...you wish to receive
                                         by<br/> mail one FREE roll of our Printed 
-                                        Sealing <br/> Tape and one 2019 Calendar
+                                        Sealing <br/> Tape and one 2020 Calendar
                                         Magnet <br/>(while supplies last)
                                     </p>
                                     <label className="form-field-label">

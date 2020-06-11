@@ -44,7 +44,7 @@ const Home = (props) => {
             <div className="row">
                 <FoodGradeTapesModal />
                 <div className="col-md">
-                    <a className="no-cursor" target="_blank">
+                    <a href="https://www.pma.com" target="_blank">
                         <img src="./assets/img/2019-PMA-SUMMIT.jpg"
                             className="img-fluid"
                             alt="2019 PMA Summit" />
