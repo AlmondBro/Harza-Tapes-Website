@@ -24,7 +24,7 @@ class Contact extends Component  {
             message: "",
             address: "",
             city: "",
-            stateUSA: "",
+            stateUSA: "CA",
             zipcode: "",
             renderMessage: false,
             firstTimeRender: null,
@@ -321,6 +321,7 @@ class Contact extends Component  {
                                         State: 
                                     </label>
                                     <select value={this.state.stateUSA}
+                                            defaultValue={{label: " California ( CA ) ", value: "CA"}}
                                             onChange={this.handleChange}
                                     > 
                                         { this.generateStateOptions() }
