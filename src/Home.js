@@ -40,6 +40,7 @@ const Home = (props) => {
                         alt="Tape Dispensers" />
                     </Link>
                 </div>
+
             </div> 
             <div className="row">
                 <FoodGradeTapesModal />
