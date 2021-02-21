@@ -1290,6 +1290,16 @@ p.form-field-message {
     font-weight: bold;
 }
 
+#form-loadingMessage {
+	color: white;
+	background-color: orange;
+	padding: 0.5em;
+	max-width: 210px;
+	border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
 #requiredText {
     font-size: 1.15em;
     font-weight: bold;

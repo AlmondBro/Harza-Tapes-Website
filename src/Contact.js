@@ -28,7 +28,8 @@ class Contact extends Component  {
             zipcode: "",
             renderMessage: false,
             firstTimeRender: null,
-            emailSentSuccess: false
+            emailSentSuccess: false,
+            isSending : false
         };
     }
 
@@ -59,10 +60,15 @@ class Contact extends Component  {
         this.setState({stateUSA: event.target.value});
       }
 
-    sendEmail = (event) => {
-        console.log("Sending e-mail...");        
+    sendEmail = async (event) => {
+        console.log("Sending e-mail...");   
+        this.setState({
+            isSending : true
+        });
+
         let to = isDev ? "juandavid@jdlondono.com" : "sales@harzatapes.com";
-        let from = this.state.email;
+        let from = "juandavid@jdlondono.com";
+        //this.state.email;
         let subject = `New Client Message from HarzaTapes.com: ${this.state.subject}`;
         let message = `<strong>Name of Client (Sender)<strong>:\t ${this.state.clientName} ${"\n"} <br/>
                        <strong>Address</strong>:\t ${this.state.address} \n${"\n"} <br/>
@@ -74,19 +80,29 @@ class Contact extends Component  {
                        <strong>Message</strong>: \t ${this.state.message} <br/>
                        `
         let sendEmail = SmtpService();
-        sendEmail.send({
+        let emailSuccessMessage = await sendEmail.send({
             SecureToken : process.env.REACT_APP_SMTPJS_CRED,
             To : to,
             From : from,
             Subject : subject,
             Body : message
-        }).then(
-          message => console.log(message)
-        );
-        console.log("Email sent");
-        this.setState({
-            emailSentSuccess: true 
         });
+       
+        if (emailSuccessMessage === "OK") {
+            this.setState({
+                emailSentSuccess: true,
+                isSending: false
+            });
+            
+        } 
+        
+        if (emailSuccessMessage && emailSuccessMessage !== "OK") {
+            console.log(emailSuccessMessage);
+            this.setState({
+                emailSentSuccess: false,
+                isSending : false
+            }); 
+        }
     };
 
     formValidate = (event) => {
@@ -121,7 +137,8 @@ class Contact extends Component  {
             stateUSA: "",
             zipcode: "",
             emailSent: false,
-            firstTimeRender: true
+            firstTimeRender: true,
+            isSending : false
         });
     };
 
@@ -344,13 +361,16 @@ class Contact extends Component  {
                                 </p>
                                 <div>
                                     <p id={ !this.state.firstTimeRender ? 
-                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
-                                                ? "form-successMessage" 
+                                            ( (this.state.emailSentSuccess === true) && !this.state.firstTimeRender && (this.state.isSending === false)
+                                                ? "form-successMessage" : 
+                                                (!this.state.emailSentSuccess) && (this.state.isSending === true) ? "form-loadingMessage"
                                                             : "form-errorMessage") 
                                             : ""}
-                                    > { !this.state.firstTimeRender ? 
-                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
-                                                ? `E-mail sent successfuly ${String.fromCharCode(10004)}` : `Sending e-mail failed ${String.fromCharCode(215)}` ) 
+                                    > { !this.state.firstTimeRender && (this.state.isSending !== null) ? 
+                                            (this.state.emailSentSuccess && !this.state.firstTimeRender && (this.state.isSending === false)
+                                                ? `E-mail sent successfuly ${String.fromCharCode(10004)}` : 
+                                                (this.state.emailSentSuccess !== "OK") && (this.state.isSending === true) ? "Sending e-mail..."
+                                                    : `Sending e-mail failed ${String.fromCharCode(215)}` ) 
                                         : ""}
                                     </p>
                                 </div>
