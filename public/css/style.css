@@ -1229,6 +1229,7 @@ button#reset-button:hover {
 }
 
 .qrCode-figure img {
+ height: 125px;
  margin: 0 auto;
  display: -webkit-box;
  display: -ms-flexbox;
@@ -1247,6 +1248,10 @@ button#reset-button:hover {
 .qrCode-figure figcaption {
  font-size: 1em;
  text-align: center;
+}
+
+#harza-qr-code {
+    height: 125px;
 }
 
 p.extraContactInfo a,

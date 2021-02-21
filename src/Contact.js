@@ -175,7 +175,7 @@ class Contact extends Component  {
                             </div>
                             <div className="col-md-3">
                                 <figure className="qrCode-figure">
-                                    <img src="./assets/img/contactUs-QRcode.jpg" className="img-fluid" alt="Harza Tapes QR Code" />
+                                    <img src="./assets/img/contactUs-QRcode.jpg" id="harza-qr-code" className="img-fluid" alt="Harza Tapes QR Code" />
                                     <figcaption>Scan and save our <br/> info on your cellphone</figcaption>
                                 </figure>
                             </div>
