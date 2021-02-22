@@ -22,6 +22,14 @@ class FoodGradeTapesModal extends Component {
       <div className="col-md">
          <p id="foodGradeTapes" onClick={this.onOpenModal}>Click here for info on our Food Grade Tapes</p>
          <p id="customPrintedTapes" onClick={this.onOpenModal}>CUSTOM PRINTED TAPES FOR DIRECT <br/>CONTACT WITH FOOD!!</p>
+         <div className="col-sm max-width-100">
+            <img 
+              className="img-fluid"
+              id="organically-grown-tape"
+              src="./assets/img/organically-grown-tape.png"
+              alt="Tape Dispensers" 
+            />  
+          </div>
         <Modal 
             id="foodGradeTape-modal"
             open={open} 

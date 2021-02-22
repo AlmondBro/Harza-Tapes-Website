@@ -24,11 +24,12 @@ class Contact extends Component  {
             message: "",
             address: "",
             city: "",
-            stateUSA: "",
+            stateUSA: "CA",
             zipcode: "",
             renderMessage: false,
             firstTimeRender: null,
-            emailSentSuccess: false
+            emailSentSuccess: false,
+            isSending : false
         };
     }
 
@@ -59,34 +60,49 @@ class Contact extends Component  {
         this.setState({stateUSA: event.target.value});
       }
 
-    sendEmail = (event) => {
-        console.log("Sending e-mail...");        
+    sendEmail = async (event) => {
+        console.log("Sending e-mail...");   
+        this.setState({
+            isSending : true
+        });
+
         let to = isDev ? "juandavid@jdlondono.com" : "sales@harzatapes.com";
-        let from = this.state.email;
+        let from = "juandavid@jdlondono.com";
+        //this.state.email;
         let subject = `New Client Message from HarzaTapes.com: ${this.state.subject}`;
         let message = `<strong>Name of Client (Sender)<strong>:\t ${this.state.clientName} ${"\n"} <br/>
                        <strong>Address</strong>:\t ${this.state.address} \n${"\n"} <br/>
                        <strong>City</strong>: \t ${this.state.city} \n${"\n"} <br/>
                        <strong>State</strong>: \t ${this.state.stateUSA} \n${"\n"} <br/>
                        <strong>Company</strong>:\t ${this.state.companyName} \n${"\n"} <br/>
-                       <strong>E-mail</strong>:\t ${from} \n${"\n"} <br/>
+                       <strong>E-mail</strong>:\t ${this.state.email} \n${"\n"} <br/>
                        <strong>Phone</strong>:\t ${this.state.phone} \n <br/>
                        <strong>Message</strong>: \t ${this.state.message} <br/>
                        `
         let sendEmail = SmtpService();
-        sendEmail.send({
+        let emailSuccessMessage = await sendEmail.send({
             SecureToken : process.env.REACT_APP_SMTPJS_CRED,
             To : to,
             From : from,
             Subject : subject,
             Body : message
-        }).then(
-          message => console.log(message)
-        );
-        console.log("Email sent");
-        this.setState({
-            emailSentSuccess: true 
         });
+       
+        if (emailSuccessMessage === "OK") {
+            this.setState({
+                emailSentSuccess: true,
+                isSending: false
+            });
+            
+        } 
+        
+        if (emailSuccessMessage && emailSuccessMessage !== "OK") {
+            console.log(emailSuccessMessage);
+            this.setState({
+                emailSentSuccess: false,
+                isSending : false
+            }); 
+        }
     };
 
     formValidate = (event) => {
@@ -121,7 +137,8 @@ class Contact extends Component  {
             stateUSA: "",
             zipcode: "",
             emailSent: false,
-            firstTimeRender: true
+            firstTimeRender: true,
+            isSending : false
         });
     };
 
@@ -175,7 +192,7 @@ class Contact extends Component  {
                             </div>
                             <div className="col-md-3">
                                 <figure className="qrCode-figure">
-                                    <img src="./assets/img/contactUs-QRcode.jpg" className="img-fluid" alt="Harza Tapes QR Code" />
+                                    <img src="./assets/img/contactUs-QRcode.jpg" id="harza-qr-code" className="img-fluid" alt="Harza Tapes QR Code" />
                                     <figcaption>Scan and save our <br/> info on your cellphone</figcaption>
                                 </figure>
                             </div>
@@ -289,10 +306,9 @@ class Contact extends Component  {
                             <div className="col-md-6">
                                 <div className="form-field">
                                     <p className="form-field-message">
-                                        Include only if...you wish to receive
-                                        by<br/> mail one FREE roll of our Printed 
-                                        Sealing <br/> Tape and one 2020 Calendar
-                                        Magnet <br/>(while supplies last)
+                                    Include only if you wish to receive by
+                                    mail one <br/> FREE roll of our Printed Sealing
+                                    Tape 
                                     </p>
                                     <label className="form-field-label">
                                         Address: 
@@ -322,6 +338,7 @@ class Contact extends Component  {
                                         State: 
                                     </label>
                                     <select value={this.state.stateUSA}
+                                            defaultValue={{label: " California ( CA ) ", value: "CA"}}
                                             onChange={this.handleChange}
                                     > 
                                         { this.generateStateOptions() }
@@ -344,13 +361,16 @@ class Contact extends Component  {
                                 </p>
                                 <div>
                                     <p id={ !this.state.firstTimeRender ? 
-                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
-                                                ? "form-successMessage" 
+                                            ( (this.state.emailSentSuccess === true) && !this.state.firstTimeRender && (this.state.isSending === false)
+                                                ? "form-successMessage" : 
+                                                (!this.state.emailSentSuccess) && (this.state.isSending === true) ? "form-loadingMessage"
                                                             : "form-errorMessage") 
                                             : ""}
-                                    > { !this.state.firstTimeRender ? 
-                                            (this.state.emailSentSuccess && !this.state.firstTimeRender 
-                                                ? `E-mail sent successfuly ${String.fromCharCode(10004)}` : `Sending e-mail failed ${String.fromCharCode(215)}` ) 
+                                    > { !this.state.firstTimeRender && (this.state.isSending !== null) ? 
+                                            (this.state.emailSentSuccess && !this.state.firstTimeRender && (this.state.isSending === false)
+                                                ? `E-mail sent successfuly ${String.fromCharCode(10004)}` : 
+                                                (this.state.emailSentSuccess !== "OK") && (this.state.isSending === true) ? "Sending e-mail..."
+                                                    : `Sending e-mail failed ${String.fromCharCode(215)}` ) 
                                         : ""}
                                     </p>
                                 </div>
