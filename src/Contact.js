@@ -75,7 +75,7 @@ class Contact extends Component  {
                        <strong>City</strong>: \t ${this.state.city} \n${"\n"} <br/>
                        <strong>State</strong>: \t ${this.state.stateUSA} \n${"\n"} <br/>
                        <strong>Company</strong>:\t ${this.state.companyName} \n${"\n"} <br/>
-                       <strong>E-mail</strong>:\t ${from} \n${"\n"} <br/>
+                       <strong>E-mail</strong>:\t ${this.state.email} \n${"\n"} <br/>
                        <strong>Phone</strong>:\t ${this.state.phone} \n <br/>
                        <strong>Message</strong>: \t ${this.state.message} <br/>
                        `
